@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  CSNA
+
+  Created by Wilhelm Thieme on 07/11/2020.
+  
+*/
+"ok" = "Ok";
+"reset" = "Opnieuw started";
+"export0" = "Exporteer TXT";
+"export1" = "Exporteer CSV";
+"export2" = "Exporteer JSON";
+"add" = "Toevoegen";
+"remove" = "Verwijderen";
+"rename" = "Hernoemen";
+"icon" = "Icoon";
+
+"copyright" = "© 2020 Wilhelm Thieme\nAlle rechten voorbehouden";
+
+"unisexNames" = "Aiden,Alex,Ali,Anne,Arin,Auke,Beau,Billie,Bobbi,Bodi,Bowie,Charlie,Chris,Cleo,Dani,Danny,Demi,Diaz,Djess,Dominik,Eden,Edin,Elisa,Esra,Ilja,Imme,Imre,Indi,Jace,Jacey,Jackie,Jaël,Jaidy,Jaimey,Jesse,Jin,Jip,Jippe,Jodi,Jonne,Jos,José,Jules,Juno,Juul,Kaya,Kayden,Kees,Kenzi,Kim,Lennie,Lennox,Lesley,Loek,Logan,Lou,Luca,Lucca,Lux,Mace,Manoah,Manu,Mari,Marijn,Max,Maxim,Merijn,Merlijn,Mick,Mischa,Moos,Morgan,Nick,Nicky,Noa,Noé,Noël,Pascal,Pax,Paz,Pim,Quin,Quincy,René,Reza,Riv,River,Robbin,Rowan,Sacha,Sam,Sami,Sem,Semih,Senna,Silver,Sjors,Sky,Skylar,Sydney";

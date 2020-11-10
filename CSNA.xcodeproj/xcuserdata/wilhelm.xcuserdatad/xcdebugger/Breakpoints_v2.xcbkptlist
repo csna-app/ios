@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F075D742-3C27-4DA6-8B7F-4E08DFB66C96"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C44F552E-02B1-463D-A450-40B1D60EC77C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Utility.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "formattedTime(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B29441F-945A-40D2-8ED9-FD3811F86133"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "addActors()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B29441F-945A-40D2-8ED9-FD3811F86133 - ebe4703e819290e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSNA.Scene.(addActors in _163C708B4219E117E5605E47E9660901)() -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "644">
+               </Location>
+               <Location
+                  uuid = "3B29441F-945A-40D2-8ED9-FD3811F86133 - 7212b06bf72ba4fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CSNA.Actor) -&gt; () in CSNA.Scene.(addActors in _163C708B4219E117E5605E47E9660901)() -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "954214A8-3443-414D-80B6-9C3C4EF8EAB5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Controller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "viewDidLayoutSubviews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "731C3D9C-8CAE-453C-873F-8DD843644419"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "touchesBegan(_:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16F8E517-817A-4569-A624-B184F81F7B04"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "touchesBegan(_:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "693849BB-E147-4C12-AF06-FF26910606DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "init(actor:parentSize:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61E5B473-A3C3-451B-A274-441B2CCCE122"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "init(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CEA90E7-C8BB-4CA8-BFC3-73BF9122B63E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "init(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03D1CF2F-6892-4B81-AACE-33223A5F55FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "updateConnections(_:haptics:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A649914-DB68-4265-9E1C-772B3977E8D7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "updateConnections(_:haptics:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "483C423A-3110-4849-BC77-5F83691A20FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "updateConnections(_:haptics:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "483C423A-3110-4849-BC77-5F83691A20FB - 368e1912d4fd0f40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSNA.Scene.(updateConnections in _163C708B4219E117E5605E47E9660901)(_: CSNA.(Node in _163C708B4219E117E5605E47E9660901), haptics: Swift.Bool) -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "1555">
+               </Location>
+               <Location
+                  uuid = "483C423A-3110-4849-BC77-5F83691A20FB - 4e8f9cdc2082513b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #6 (CSNA.(Node in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in CSNA.Scene.(updateConnections in _163C708B4219E117E5605E47E9660901)(_: CSNA.(Node in _163C708B4219E117E5605E47E9660901), haptics: Swift.Bool) -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "483C423A-3110-4849-BC77-5F83691A20FB - cf0914325f480f1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CSNA.(Line in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in closure #6 (CSNA.(Node in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in CSNA.Scene.(updateConnections in _163C708B4219E117E5605E47E9660901)(_: CSNA.(Node in _163C708B4219E117E5605E47E9660901), haptics: Swift.Bool) -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68AA8CB6-C722-403E-AB1B-CB9F4615F7B9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "updateConnections(_:haptics:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68AA8CB6-C722-403E-AB1B-CB9F4615F7B9 - 368e1912d4fd0fa1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSNA.Scene.(updateConnections in _163C708B4219E117E5605E47E9660901)(_: CSNA.(Node in _163C708B4219E117E5605E47E9660901), haptics: Swift.Bool) -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "1290">
+               </Location>
+               <Location
+                  uuid = "68AA8CB6-C722-403E-AB1B-CB9F4615F7B9 - c6a2e6ec2829a3d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 (CSNA.(Line in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in CSNA.Scene.(updateConnections in _163C708B4219E117E5605E47E9660901)(_: CSNA.(Node in _163C708B4219E117E5605E47E9660901), haptics: Swift.Bool) -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "38">
+               </Location>
+               <Location
+                  uuid = "68AA8CB6-C722-403E-AB1B-CB9F4615F7B9 - fd572b1d98240f8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 (CSNA.(Node in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in implicit closure #1 (Swift.Array&lt;CSNA.(Node in _163C708B4219E117E5605E47E9660901)&gt;) -&gt; (CSNA.(Node in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in closure #5 (CSNA.(Line in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in CSNA.Scene.(updateConnections in _163C708B4219E117E5605E47E9660901)(_: CSNA.(Node in _163C708B4219E117E5605E47E9660901), haptics: Swift.Bool) -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F824929-C230-479A-B19F-6661249B7EFB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "updateConnections(_:haptics:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F824929-C230-479A-B19F-6661249B7EFB - 368e1912d4fd0f82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSNA.Scene.(updateConnections in _163C708B4219E117E5605E47E9660901)(_: CSNA.(Node in _163C708B4219E117E5605E47E9660901), haptics: Swift.Bool) -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "1025">
+               </Location>
+               <Location
+                  uuid = "8F824929-C230-479A-B19F-6661249B7EFB - 116345f935b2f1f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (CSNA.(Line in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in CSNA.Scene.(updateConnections in _163C708B4219E117E5605E47E9660901)(_: CSNA.(Node in _163C708B4219E117E5605E47E9660901), haptics: Swift.Bool) -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "38">
+               </Location>
+               <Location
+                  uuid = "8F824929-C230-479A-B19F-6661249B7EFB - fd572b1d98240fa8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 (CSNA.(Node in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in implicit closure #1 (Swift.Array&lt;CSNA.(Node in _163C708B4219E117E5605E47E9660901)&gt;) -&gt; (CSNA.(Node in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in closure #4 (CSNA.(Line in _163C708B4219E117E5605E47E9660901)) -&gt; Swift.Bool in CSNA.Scene.(updateConnections in _163C708B4219E117E5605E47E9660901)(_: CSNA.(Node in _163C708B4219E117E5605E47E9660901), haptics: Swift.Bool) -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
