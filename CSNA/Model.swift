@@ -36,7 +36,7 @@ class Model: NSObject, Codable {
     }
     
     func add(transaction groups: [[Actor]], time: Int) {
-        transactions[time] = actors.map { [$0.id] }
+        transactions[time] = groups.map { $0.map { $0.id } }
     }
     
     func getActor(_ id: String) -> Actor? { return actors.first { $0.id == id } ?? removedActors.first { $0.id == id } ?? nil }

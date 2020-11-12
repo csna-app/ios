@@ -100,6 +100,7 @@ class Controller: UIViewController, SettingsDelegate, SceneTransactionDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        if scene.size == mainView.frame.size { return }
         scene.size = mainView.frame.size
         scene.reloadActors()
     }

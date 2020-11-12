@@ -118,7 +118,7 @@ class Service {
     case txt, csv, json
     
     fileprivate func convert(_ model: Model) -> Data? {
-        let values = model.transactions.mapValues { model.getActorNames($0) }
+        let values = model.transactions.mapValues({ model.getActorNames($0) }).sorted(by: { $0.key < $1.key })
         switch self {
         case .txt:
             let string = values.map({ "\($0.0): \($0.1)" }).joined(separator: "\n")
@@ -127,8 +127,8 @@ class Service {
             let string = values.map({ "\($0.0);\($0.1.map({ $0.joined(separator: ",") }).joined(separator: ";"))" }).joined(separator: "\n")
             return string.data(using: .utf8)
         case .json:
-            let dict = values.reduce([:], { ["\($1.key)": $1.value]  })
-            return try? JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted])
+            let dict = values.reduce(into: [:], { $0["\($1.key)"] = $1.value  })
+            return try? JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys])
         }
     }
     
