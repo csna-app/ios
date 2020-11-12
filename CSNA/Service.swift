@@ -124,7 +124,7 @@ class Service {
             let string = values.map({ "\($0.0): \($0.1)" }).joined(separator: "\n")
             return string.data(using: .utf8)
         case .csv:
-            let string = values.map({ "\($0.0);\($0.1.map({ $0.joined(separator: ",") }).joined(separator: ";"))" }).joined(separator: "\n")
+            let string = values.map({ "\($0.0),\($0.1.map({ $0.joined(separator: ";") }).joined(separator: ","))" }).joined(separator: "\n")
             return string.data(using: .utf8)
         case .json:
             let dict = values.reduce(into: [:], { $0["\($1.key)"] = $1.value  })

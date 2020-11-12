@@ -239,6 +239,7 @@ class Settings: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             actor.icon = Icon.allCases[indexPath.row]
             collectionView.reloadData()
             Service.saveModel()
+            delegate?.settings?(didEditSettings: self)
         } else {
             let controller = Settings(detail: Service.actors[indexPath.row])
             controller.delegate = self
@@ -271,6 +272,7 @@ class Settings: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             actor.name = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
             collectionView.reloadData()
             Service.saveModel()
+            delegate?.settings?(didEditSettings: self)
         }
     }
     
