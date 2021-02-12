@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED00D13925D6AADB003D0562 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED00D13825D6AADB003D0562 /* View.xib */; };
+		ED00D13D25D6B1A4003D0562 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00D13C25D6B1A4003D0562 /* Node.swift */; };
 		ED6C6F62255592FE004A2C69 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6F61255592FE004A2C69 /* Delegate.swift */; };
 		ED6C6F66255592FE004A2C69 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6F65255592FE004A2C69 /* Controller.swift */; };
 		ED6C6F6B25559300004A2C69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6C6F6A25559300004A2C69 /* Assets.xcassets */; };
@@ -16,11 +18,13 @@
 		ED6C6FAC25559BC6004A2C69 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6FAB25559BC6004A2C69 /* Model.swift */; };
 		ED6C6FAF2555A49D004A2C69 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6FAE2555A49D004A2C69 /* Utility.swift */; };
 		ED6C6FB22555A8E9004A2C69 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6FB12555A8E9004A2C69 /* Scene.swift */; };
-		ED6C6FBC2556F90F004A2C69 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6FBB2556F90F004A2C69 /* Settings.swift */; };
 		ED6C6FC1255705CB004A2C69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED6C6FC3255705CB004A2C69 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED00D13825D6AADB003D0562 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		ED00D13C25D6B1A4003D0562 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		ED00D14425D6BC54003D0562 /* CSNA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CSNA.entitlements; sourceTree = "<group>"; };
 		ED6C6F5E255592FE004A2C69 /* CSNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6C6F61255592FE004A2C69 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		ED6C6F65255592FE004A2C69 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
@@ -32,7 +36,6 @@
 		ED6C6FAB25559BC6004A2C69 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		ED6C6FAE2555A49D004A2C69 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		ED6C6FB12555A8E9004A2C69 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
-		ED6C6FBB2556F90F004A2C69 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		ED6C6FC2255705CB004A2C69 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED6C6FC5255705DA004A2C69 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,16 +70,18 @@
 		ED6C6F60255592FE004A2C69 /* CSNA */ = {
 			isa = PBXGroup;
 			children = (
+				ED00D14425D6BC54003D0562 /* CSNA.entitlements */,
 				ED6C6F61255592FE004A2C69 /* Delegate.swift */,
 				ED6C6FAB25559BC6004A2C69 /* Model.swift */,
 				ED6C6FA8255598E5004A2C69 /* Service.swift */,
 				ED6C6FAE2555A49D004A2C69 /* Utility.swift */,
 				ED6C6F65255592FE004A2C69 /* Controller.swift */,
-				ED6C6FBB2556F90F004A2C69 /* Settings.swift */,
 				ED6C6FB12555A8E9004A2C69 /* Scene.swift */,
+				ED00D13C25D6B1A4003D0562 /* Node.swift */,
 				ED6C6FC3255705CB004A2C69 /* Localizable.strings */,
 				ED6C6F6A25559300004A2C69 /* Assets.xcassets */,
 				ED6C6F6C25559300004A2C69 /* Launch.storyboard */,
+				ED00D13825D6AADB003D0562 /* View.xib */,
 				ED6C6F9F2555939D004A2C69 /* Settings.bundle */,
 				ED6C6F6F25559300004A2C69 /* Info.plist */,
 			);
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED6C6FC1255705CB004A2C69 /* Localizable.strings in Resources */,
+				ED00D13925D6AADB003D0562 /* View.xib in Resources */,
 				ED6C6F6E25559300004A2C69 /* Launch.storyboard in Resources */,
 				ED6C6FA02555939D004A2C69 /* Settings.bundle in Resources */,
 				ED6C6F6B25559300004A2C69 /* Assets.xcassets in Resources */,
@@ -181,7 +187,7 @@
 				ED6C6F66255592FE004A2C69 /* Controller.swift in Sources */,
 				ED6C6FB22555A8E9004A2C69 /* Scene.swift in Sources */,
 				ED6C6F62255592FE004A2C69 /* Delegate.swift in Sources */,
-				ED6C6FBC2556F90F004A2C69 /* Settings.swift in Sources */,
+				ED00D13D25D6B1A4003D0562 /* Node.swift in Sources */,
 				ED6C6FA9255598E5004A2C69 /* Service.swift in Sources */,
 				ED6C6FAC25559BC6004A2C69 /* Model.swift in Sources */,
 			);
@@ -333,17 +339,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CSNA/CSNA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ELM74XG98;
 				INFOPLIST_FILE = CSNA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjthieme.CSNA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,17 +363,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CSNA/CSNA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ELM74XG98;
 				INFOPLIST_FILE = CSNA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wjthieme.CSNA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

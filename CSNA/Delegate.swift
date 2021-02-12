@@ -1,10 +1,3 @@
-//
-//  Delegate.swift
-//  CSNA
-//
-//  Created by Wilhelm Thieme on 06/11/2020.
-//
-
 import UIKit
 
 @UIApplicationMain

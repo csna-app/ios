@@ -1,28 +1,26 @@
-//
-//  Model.swift
-//  CSNA
-//
-//  Created by Wilhelm Thieme on 06/11/2020.
-//
-
 import UIKit
 
 class Model: NSObject, Codable {
     private(set) var ticks: Int
     private(set) var actors: Set<Actor>
+    private(set) var terrains: Set<Terrain>
     private var removedActors: Set<Actor>
     private(set) var transactions: [Int: [[String]]]
     
     override init() {
         ticks = 0
         actors = [Actor(CGPoint(x: 0.35, y: 0.65)), Actor(CGPoint(x: 0.5, y: 0.8)), Actor(CGPoint(x: 0.65, y: 0.65)), Actor(CGPoint(x: 0.65, y: 0.35)), Actor(CGPoint(x: 0.5, y: 0.2)), Actor(CGPoint(x: 0.35, y: 0.35))]
+        terrains = []
         transactions = [0: actors.map { [$0.id] }]
         removedActors = []
     }
     
-    
     func tick() {
         ticks += 1
+    }
+    
+    func add(terrain: Terrain) {
+        terrains.insert(terrain)
     }
     
     func add(actor: Actor) {
@@ -33,6 +31,10 @@ class Model: NSObject, Codable {
         guard actors.contains(actor) else { return }
         actors.remove(actor)
         removedActors.insert(actor)
+    }
+    
+    func remove(terrain: Terrain) {
+        terrains.remove(terrain)
     }
     
     func add(transaction groups: [[Actor]], time: Int) {
@@ -62,6 +64,50 @@ class Actor: NSObject, Codable {
         centerY = Float(position.y)
     }
     
+}
+
+class Terrain: NSObject, Codable {
+    let id: String
+    var type: TerrainType
+    var centerX: Float
+    var centerY: Float
+    var scale: TerrainSize
+    
+    init(terrainType: TerrainType, _ position: CGPoint = CGPoint(x: 0.5, y: 0.5)) {
+        id = UUID().uuidString
+        centerX = Float(position.x)
+        centerY = Float(position.y)
+        type = terrainType
+        scale = .small
+    }
+}
+
+enum TerrainSize: Float, Codable, CaseIterable {
+    case tiny = 2, small = 4, medium = 6, large = 8, huge = 10, extreme = 12
+}
+
+enum TerrainType: Int, Codable, CaseIterable {
+    case bookcase, wardrobe, building, temple, bed, tv, computer, radio, guitars, game, paint, rectangle, circle
+    
+    var icon: String {
+        switch self {
+        case .bookcase: return "books.vertical"
+        case .wardrobe: return "tablecells"
+        case .building: return "building.2"
+        case .temple: return "building.columns"
+        case .bed: return "bed.double"
+        case .tv: return "tv"
+        case .computer: return "desktopcomputer"
+        case .radio: return "radio"
+        case .guitars: return "guitars"
+        case .game: return "gamecontroller"
+        case .paint: return "paintpalette"
+        case .rectangle: return "rectangle"
+        case .circle: return "circle"
+        }
+    }
+    
+    var localized: String { return localizedString("terrain\(rawValue)")}
 }
 
 enum Icon: String, Codable, CaseIterable  {

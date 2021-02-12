@@ -1,10 +1,3 @@
-//
-//  Utility.swift
-//  CSNA
-//
-//  Created by Wilhelm Thieme on 06/11/2020.
-//
-
 import UIKit
 
 func formattedTime(_ value: Int) -> String {
@@ -13,7 +6,6 @@ func formattedTime(_ value: Int) -> String {
     let seconds = (value % 3600) % 60
     return hours > 0 ? String(format: "%00d:%02d:%02d", hours, minutes, seconds) : String(format: "%02d:%02d", minutes, seconds)
 }
-
 
 func localizedString(_ key: String, _ options: String...) -> String {
     var string = NSLocalizedString(key, comment: "")
@@ -73,5 +65,15 @@ extension Dictionary where Key: Comparable {
     var last: Value? {
         guard let key = keys.sorted().last else { return nil }
         return self[key]
+    }
+}
+
+extension UILabel {
+    @IBInspectable var localized: Bool {
+        get { return true }
+        set(value) {
+            guard let key = text, value else { return }
+            text = localizedString(key)
+        }
     }
 }

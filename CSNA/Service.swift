@@ -1,10 +1,3 @@
-//
-//  Service.swift
-//  CSNA
-//
-//  Created by Wilhelm Thieme on 06/11/2020.
-//
-
 import UIKit
 
 fileprivate let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("model.json")
@@ -73,15 +66,28 @@ class Service {
     
     static var ticks: Int { return shared.model.ticks }
     static var actors: [Actor] { return Array(shared.model.actors).sorted(by: { $0.id > $1.id }) }
+    static var terrain: [Terrain] { return Array(shared.model.terrains).sorted(by: { $0.id > $1.id }) }
     static var lastGroups: [[Actor]]  { return shared.model.transactions.last?.map { $0.compactMap { shared.model.getActor($0) } } ?? [] }
     
     static func addActor() {
-        shared.model.add(actor: Actor())
+        let actor = Actor()
+        shared.model.add(actor: actor)
+        addTransaction(lastGroups + [[actor]])
+        shared.saveModel()
+    }
+    
+    static func addTerrain(type: TerrainType) {
+        shared.model.add(terrain: Terrain(terrainType: type))
         shared.saveModel()
     }
 
     static func removeActor(_ actor: Actor) {
         shared.model.remove(actor: actor)
+        shared.saveModel()
+    }
+    
+    static func removeTerrain(_ terrain: Terrain) {
+        shared.model.remove(terrain: terrain)
         shared.saveModel()
     }
 
@@ -99,7 +105,7 @@ class Service {
     }
     
     static func export(_ type: ExportType, completion: @escaping ((Result<URL, Error>) -> Void)) {
-        DispatchQueue.global().async {
+        DispatchQueue.global(qos: .userInteractive).async {
             do {
                 let temp = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
                 let url = temp.appendingPathComponent(type.filename)
@@ -115,7 +121,7 @@ class Service {
 
 
 @objc enum ExportType: Int, CaseIterable {
-    case txt, csv, json
+    case txt, csvGroup, json, csvActor
     
     fileprivate func convert(_ model: Model) -> Data? {
         let values = model.transactions.mapValues({ model.getActorNames($0) }).sorted(by: { $0.key < $1.key })
@@ -123,12 +129,15 @@ class Service {
         case .txt:
             let string = values.map({ "\($0.0): \($0.1)" }).joined(separator: "\n")
             return string.data(using: .utf8)
-        case .csv:
+        case .csvGroup:
             let string = values.map({ "\($0.0),\($0.1.map({ $0.joined(separator: ";") }).joined(separator: ","))" }).joined(separator: "\n")
             return string.data(using: .utf8)
         case .json:
             let dict = values.reduce(into: [:], { $0["\($1.key)"] = $1.value  })
             return try? JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys])
+        case .csvActor:
+            let string = values.map({ "\($0.0),\($0.1.map({ $0.joined(separator: ";") }).joined(separator: ","))" }).joined(separator: "\n")
+            return string.data(using: .utf8)
         }
     }
     
@@ -136,11 +145,19 @@ class Service {
         var name = ISO8601DateFormatter().string(from: Date())
         switch self {
         case .txt: name.append(".txt")
-        case .csv: name.append(".csv")
+        case .csvGroup, .csvActor: name.append(".csv")
         case .json: name.append(".json")
         }
         return name
     }
     
+    var icon: UIImage? {
+        switch self {
+        case .txt: return UIImage(systemName: "doc.plaintext")
+        case .csvGroup, .csvActor: return UIImage(systemName: "chart.bar.doc.horizontal")
+        case .json: return UIImage(systemName: "doc.badge.gearshape")
+        }
+    }
     
+    var name: String { return localizedString("export\(rawValue)")}
 }

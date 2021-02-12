@@ -5,17 +5,14 @@
   Created by Wilhelm Thieme on 07/11/2020.
   
 */
-"ok" = "Ok";
-"reset" = "Start Over";
+
 "export0" = "Export TXT";
-"export1" = "Export CSV";
+"export1" = "Export CSV Groups";
 "export2" = "Export JSON";
-"add" = "Add";
-"remove" = "Remove";
-"rename" = "Rename";
-"icon" = "Icon";
+"export3" = "Export CSV Actors";
+"addActor" = "Add Actor";
+"addTerrain" = "Add Terrain";
 
-"copyright" = "© 2020 Wilhelm Thieme\nAll Rights Reserved";
-
+"copyright" = "Wilhelm Thieme 2020 ©\nAll Rights Reserved";
 
 "unisexNames" = "Avery,Riley,Jordan,Angel,Parker,Sawyer,Peyton,Quinn,Blake,Hayden,Taylor,Alexis,Rowan,Charlie,Emerson,Finley,River,Ariel,Emery,Morgan,Elliot,London,Eden,Elliott,Karter,Dakota,Reese,Zion,Remington,Payton,Amari,Phoenix,Kendall,Harley,Rylan,Marley,Dallas,Skyler,Spencer,Sage,Kyrie,Lyric,Ellis,Rory,Remi,Justice,Ali,Haven,Tatum,Kamryn,Royal,Lennon,Lennox,Milan,Jaylen,Noel,Remy,Ari,Leighton,Oakley,Drew,Camryn,Armani,Chandler,Jamie,Casey,Sterling,Shiloh,Kelly,Emory,Francis,Jessie,Henley,Blair,Wren,Sutton,Azariah,Reece,Quincy,Landyn,Charley,Landry,Finnley,Kingsley,Kamari,Sloan,Karsyn,Rowen,Briar,Baylor,Monroe,Devon,Guadalupe,Memphis,Kalani,Gianni,Joey,Reign,Frankie,Kadence";
