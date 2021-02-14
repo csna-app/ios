@@ -1,6 +1,6 @@
-import SpriteKit
+import UIKit
 
-class Controller: UIViewController, SceneTransactionDelegate {
+class Controller: UIViewController, SceneDelegate {
 
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
@@ -10,8 +10,11 @@ class Controller: UIViewController, SceneTransactionDelegate {
     @IBOutlet private weak var addButton: UIButton!
     @IBOutlet private weak var editButton: UIButton!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet private weak var mainView: SKView!
-    private let scene = Scene()
+    @IBOutlet private weak var scene: Scene!
+    private var alert: UIAlertController?
+    
+    private var aMenu: UIMenu!
+    private var tMenu: UIMenu!
     
     private var aNodes: [Actor: ANode] = [:]
     private var tNodes: [Terrain: TNode] = [:]
@@ -28,29 +31,44 @@ class Controller: UIViewController, SceneTransactionDelegate {
         super.viewDidLoad()
 
         let shareItems = ExportType.allCases.map({ e in UIAction(title: e.name, image: e.icon, handler: { [weak self] _ in self?.export(with: e)  }) })
-        let shareMenu = UIMenu(title: "", children: shareItems)
-
-        shareButton.menu = shareMenu
+        shareButton.menu = UIMenu(title: "", children: shareItems)
         shareButton.showsMenuAsPrimaryAction = true
         
         let actorImage = UIImage(systemName: "person.crop.circle.badge.plus")
-        let addActor = UIAction(title: localizedString("addActor"), image: actorImage, handler: { [weak self] _ in self?.addActor()  })
+        let actorItems = HairStyle.allCases.map({ e in UIAction(title: e.localized, image: e.image, handler: { [weak self] _ in self?.addActor(e) }) })
+        let addActor = UIMenu(title: localizedString("addActor"), image: actorImage, children: actorItems)
         let terrainImage = UIImage(systemName: "apps.iphone.badge.plus")
         let terrainItems = TerrainType.allCases.map({ e in UIAction(title: e.localized, image: UIImage(systemName: e.icon), handler: { [weak self] _ in self?.addTerrain(e) }) })
         let addTerrain = UIMenu(title: localizedString("addTerrain"), image: terrainImage, children: terrainItems)
-        let addMenu = UIMenu(title: "", children: [addActor, addTerrain])
         
-        addButton.menu = addMenu
+        addButton.menu = UIMenu(title: "", children: [addActor, addTerrain])
         addButton.showsMenuAsPrimaryAction = true
-
-        scene.transactionDelegate = self
-        mainView.presentScene(scene)
+        
+        
+        let removeItem = UIAction(title: localizedString("remove"), image: UIImage(systemName: "trash.slash"), attributes: .destructive, handler: { [weak self] a in self?.removeNode(a.sender) })
+        
+        let typeItems = TerrainType.allCases.map({ e in UIAction(title: e.localized, image: UIImage(systemName: e.icon), handler: { [weak self] a in self?.editNode(a.sender, type: e) }) })
+        let typeItem = UIMenu(title: localizedString("type"), image: UIImage(systemName: "apps.iphone"), children: typeItems)
+        let sizeItems = TerrainSize.allCases.map({ e in UIAction(title: e.localized, image: UIImage(systemName: e.icon), handler: { [weak self] a in self?.editNode(a.sender, size: e) }) })
+        let sizeItem = UIMenu(title: localizedString("size"), image: UIImage(systemName: "aspectratio"), children: sizeItems)
+        
+        let skinItems = SkinColor.allCases.map({ e in UIAction(title: e.localized, image: UIImage(circle: e.color), handler: { [weak self] a in self?.editNode(a.sender, skin: e) }) })
+        let skinItem = UIMenu(title: localizedString("skin"), image: UIImage(systemName: "face.dashed"), children: skinItems)
+        let styleItems = HairStyle.allCases.map({ e in UIAction(title: e.localized, image: e.image, handler: { [weak self] a in self?.editNode(a.sender, gender: e) }) })
+        let styleItem = UIMenu(title: localizedString("style"), image: UIImage(systemName: "scissors"), children: styleItems)
+        let hairItems = HairColor.allCases.map({ e in UIAction(title: e.localized, image: UIImage(circle: e.color), handler: { [weak self] a in self?.editNode(a.sender, hair: e) }) })
+        let hairItem = UIMenu(title: localizedString("hair"), image: UIImage(systemName: "paintbrush.pointed"), children: hairItems)
+        let shirtItems = ShirtColor.allCases.map({ e in UIAction(title: e.localized, image: UIImage(circle: e.color), handler: { [weak self] a in self?.editNode(a.sender, shirt: e) }) })
+        let shirtItem = UIMenu(title: localizedString("shirt"), image: UIImage(systemName: "paintbrush"), children: shirtItems)
+        let nameItem = UIAction(title: localizedString("name"), image: UIImage(systemName: "signature"), handler: { [weak self] a in self?.editName(a.sender) })
+        
+        aMenu = UIMenu(title: "", children: [nameItem, skinItem, styleItem, hairItem, shirtItem, removeItem])
+        tMenu = UIMenu(title: "", children: [typeItem, sizeItem, removeItem])
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if scene.size == mainView.frame.size { return }
-        scene.size = mainView.frame.size
         scene.reloadNodes()
     }
     
@@ -65,11 +83,6 @@ class Controller: UIViewController, SceneTransactionDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        scene.traitCollectionsDidChange(to: traitCollection)
     }
     
     @objc private func startListening() {
@@ -99,8 +112,8 @@ class Controller: UIViewController, SceneTransactionDelegate {
         pauseButton.setImage(UIImage(systemName: Service.isPaused ? "play.fill" : "pause.fill"), for: .normal)
     }
     
-    private func addActor() {
-        Service.addActor()
+    private func addActor(_ gender: HairStyle) {
+        Service.addActor(gender: gender)
         scene.reloadNodes()
     }
     
@@ -108,6 +121,63 @@ class Controller: UIViewController, SceneTransactionDelegate {
         Service.addTerrain(type: type)
         scene.reloadNodes()
         if !scene.isEditing { editButtonPressed() }
+    }
+    
+    private func removeNode(_ sender: Any?) {
+        guard let node = sender as? NSObject else { return }
+        if let actor = aNodes.first(where: { $0.value == node })?.key {
+            Service.removeActor(actor)
+        }
+        if let terrain = tNodes.first(where: { $0.value == node })?.key {
+            Service.removeTerrain(terrain)
+        }
+        Service.saveModel()
+        scene.reloadNodes()
+    }
+    
+    private func editNode(_ sender: Any?, type: TerrainType? = nil, size: TerrainSize? = nil, shirt: ShirtColor? = nil, hair: HairColor? = nil, skin: SkinColor? = nil, gender: HairStyle? = nil) {
+        guard let node = sender as? NSObject else { return }
+        if let actor = aNodes.first(where: { $0.value == node })?.key {
+            if let gender = gender { actor.hairStyle = gender }
+            if let skin = skin { actor.skinColor = skin }
+            if let hair = hair { actor.hairColor = hair }
+            if let shirt = shirt { actor.shirtColor = shirt }
+        }
+        if let terrain = tNodes.first(where: { $0.value == node })?.key {
+            if let type = type { terrain.type = type }
+            if let size = size { terrain.scale = size }
+        }
+        Service.saveModel()
+        scene.reloadNodes()
+    }
+    
+    private func editName(_ sender: Any?) {
+        guard let node = sender as? NSObject else { return }
+        guard let actor = aNodes.first(where: { $0.value == node })?.key else { return }
+        
+        alert = UIAlertController(title: localizedString("name"), message: nil, preferredStyle: .alert)
+        alert?.addAction(UIAlertAction(title: localizedString("ok"), style: .default, handler: { [weak self] _ in
+            guard let self = self else { return }
+            guard let name = self.alert?.textFields?[0].text else { return }
+            actor.name = name
+            Service.saveModel()
+            self.scene.reloadNodes()
+        }))
+        alert?.addAction(UIAlertAction(title: localizedString("cancel"), style: .cancel, handler: nil))
+        alert?.addTextField { [weak self] (textField) in
+            guard let self = self else { return }
+            textField.placeholder = localizedString("name")
+            textField.text = actor.name
+            textField.addTarget(self, action: #selector(self.alertTextFieldDidChange), for: .editingChanged)
+            textField.autocapitalizationType = .sentences
+            self.alertTextFieldDidChange()
+        }
+        alert?.view.tintColor = UIColor(named: "AccentColor")
+        present(alert!, animated: true, completion: nil)
+    }
+    
+    @objc private func alertTextFieldDidChange() {
+        alert?.actions[0].isEnabled = (alert?.textFields?[0].text?.count ?? 0) > 0
     }
     
     private func export(with options: ExportType) {
@@ -134,12 +204,12 @@ class Controller: UIViewController, SceneTransactionDelegate {
     
     func scene(_ scene: Scene, node: Node, didMoveTo location: CGPoint) {
         if let actor = aNodes.first(where: { $0.value == node })?.key {
-            actor.centerX = Float(location.x / scene.size.width)
-            actor.centerY = Float(location.y / scene.size.height)
+            actor.centerX = Float(location.x / scene.bounds.width)
+            actor.centerY = Float(location.y / scene.bounds.height)
         }
         if let terrain = tNodes.first(where: { $0.value == node })?.key {
-            terrain.centerX = Float(location.x / scene.size.width)
-            terrain.centerY = Float(location.y / scene.size.height)
+            terrain.centerX = Float(location.x / scene.bounds.width)
+            terrain.centerY = Float(location.y / scene.bounds.height)
         }
         Service.saveModel()
     }
@@ -148,9 +218,9 @@ class Controller: UIViewController, SceneTransactionDelegate {
         aNodes = [:]
         
         for actor in Service.actors {
-            let x = CGFloat(actor.centerX) * scene.size.width
-            let y = CGFloat(actor.centerY) * scene.size.height
-            aNodes[actor] = ANode(icon: actor.icon.rawValue, title: actor.name, location: CGPoint(x: x, y: y))
+            let x = CGFloat(actor.centerX) * scene.bounds.width
+            let y = CGFloat(actor.centerY) * scene.bounds.height
+            aNodes[actor] = ANode(image: actor.image, title: actor.name, location: CGPoint(x: x, y: y), menu: aMenu)
         }
         
         return Service.lastGroups.map({ Set($0.compactMap({ aNodes[$0] })) })
@@ -160,23 +230,12 @@ class Controller: UIViewController, SceneTransactionDelegate {
         tNodes = [:]
         
         for terrain in Service.terrain {
-            let x = CGFloat(terrain.centerX) * scene.size.width
-            let y = CGFloat(terrain.centerY) * scene.size.height
-            tNodes[terrain] = TNode(icon: terrain.type.icon, scale: CGFloat(terrain.scale.rawValue), location: CGPoint(x: x, y: y))
+            let x = CGFloat(terrain.centerX) * scene.bounds.width
+            let y = CGFloat(terrain.centerY) * scene.bounds.height
+            tNodes[terrain] = TNode(icon: terrain.type.icon, scale: CGFloat(terrain.scale.scale), location: CGPoint(x: x, y: y), menu: tMenu)
         }
         
         return tNodes.map({ $0.value })
-    }
-    
-    func scene(_ scene: Scene, showContextMenuFor node: Node) {
-        if let actor = aNodes.first(where: { $0.value == node })?.key {
-            node.
-        }
-        if let terrain = tNodes.first(where: { $0.value == node })?.key {
-            terrain.scale = .huge
-            scene.reloadNodes()
-        }
-        print(node)
     }
     
     private func startLoading() {

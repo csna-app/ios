@@ -6,13 +6,89 @@
   
 */
 
+"remove" = "Verwijderen";
+"ok" = "Ok";
+"cancel" = "Annuleren";
+
 "export0" = "Exporteer TXT";
 "export1" = "Exporteer CSV Groepen";
 "export2" = "Exporteer JSON";
 "export3" = "Exporteer CSV Actoren";
 
-"addActor" = "Acteur toevoegen";
+"addActor" = "Personage toevoegen";
 "addTerrain" = "Terrein toevoegen";
+
+"name" = "Naam";
+"style" = "Haarstijl";
+"skin" = "Huidskleur";
+"hair" = "Haarkleur";
+"shirt" = "Kleur shirt";
+"size" = "Grootte";
+"type" = "Type";
+
+"terrain0" = "Boekenkast";
+"terrain1" = "Ladekast";
+"terrain2" = "Gebouw";
+"terrain3" = "Tempel";
+"terrain4" = "Bed";
+"terrain5" = "Televisie";
+"terrain6" = "Computer";
+"terrain7" = "Radio";
+"terrain8" = "Muziekinstrumenten";
+"terrain9" = "Spelletjes";
+"terrain10" = "Schilderij";
+"terrain11" = "Rechthoek";
+"terrain12" = "Circel";
+
+"size0" = "Mini";
+"size1" = "Klein";
+"size2" = "Medium";
+"size3" = "Groot";
+"size4" = "Enorm";
+"size5" = "Extreem";
+
+"shirt0" = "Blauw";
+"shirt1" = "Groen";
+"shirt2" = "Indigo";
+"shirt3" = "Oranje";
+"shirt4" = "Roze";
+"shirt5" = "Paars";
+"shirt6" = "Rood";
+"shirt7" = "Cyaan";
+"shirt8" = "Yellow";
+"shirt9" = "Wit";
+"shirt10" = "Zwart";
+
+"hair0" = "Ebbehout";
+"hair1" = "Chocolade";
+"hair2" = "Kaneel";
+"hair3" = "Hazelnoot";
+"hair4" = "Kastanje";
+"hair5" = "Pecan";
+"hair6" = "Gember";
+"hair7" = "Blond";
+"hair8" = "Zand";
+"hair9" = "Abricoos";
+"hair10" = "Vuur";
+"hair11" = "Herfst";
+"hair12" = "Koper";
+"hair13" = "Walnoot";
+"hair14" = "Mist";
+"hair15" = "Zilver";
+"hair16" = "Platinum";
+"hair17" = "Onyx";
+
+"skin0" = "Zijde";
+"skin1" = "Polijst";
+"skin2" = "Perzik";
+"skin3" = "Eierschaal";
+"skin4" = "Kruid";
+"skin5" = "Mahonie";
+"skin6" = "Eiken";
+"skin7" = "Klei";
+"skin8" = "Koffie";
+
+
 
 "copyright" = "Wilhelm Thieme 2020 ©\nAlle rechten voorbehouden";
 

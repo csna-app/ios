@@ -47,24 +47,110 @@ class Model: NSObject, Codable {
 
 class Actor: NSObject, Codable {
     static func == (lhs: Actor, rhs: Actor) -> Bool { return lhs.id == rhs.id }
-    override var description: String { return "\(name)\(icon.rawValue)" }
+    override var description: String { return "\(name)" }
     
     let id: String
-    var icon: Icon
+    var skinColor: SkinColor
+    var hairColor: HairColor
+    var shirtColor: ShirtColor
+    var hairStyle: HairStyle
     var name: String
     var centerX: Float
     var centerY: Float
     
+    var image: UIImage? { return UIImage(hairStyle: hairStyle, hairColor: hairColor, skinColor: skinColor, shirtColor: shirtColor) }
     
-    init(_ position: CGPoint = CGPoint(x: 0.5, y: 0.5)) {
+    init(sex: HairStyle? = nil, _ position: CGPoint = CGPoint(x: 0.5, y: 0.5)) {
         id = UUID().uuidString
-        icon = Icon.allCases.randomElement() ?? .a0
+        skinColor = SkinColor.allCases.randomElement() ?? .silk
+        hairColor = HairColor.allCases.randomElement() ?? .auburn
+        shirtColor = ShirtColor.allCases.randomElement() ?? .black
+        hairStyle = sex ?? HairStyle.allCases.randomElement() ?? .one
         name = String(localizedString("unisexNames").split(separator: ",").randomElement() ?? "")
         centerX = Float(position.x)
         centerY = Float(position.y)
     }
     
 }
+
+enum SkinColor: Int, Codable, CaseIterable {
+    case silk, lumber, peach, eggshell, spice, sienna, oak, clay, coffee
+    
+    var color: UIColor {
+        switch self {
+        case .silk: return UIColor(hex: "#ffe2c9")
+        case .eggshell: return UIColor(hex: "#e4bdad")
+        case .lumber: return UIColor(hex: "#ffd6c5")
+        case .peach: return UIColor(hex: "#ffcba3")
+        case .spice: return UIColor(hex: "#e7b38d")
+        case .sienna: return UIColor(hex: "#d8905f")
+        case .oak: return UIColor(hex: "#be794a")
+        case .clay: return UIColor(hex: "#88513a")
+        case .coffee: return UIColor(hex: "#733e26")
+        }
+    }
+    
+    var localized: String { return localizedString("skin\(rawValue)") }
+}
+
+enum HairColor: Int, Codable, CaseIterable {
+    case ebony, chocolate, cinnamon, hazelnut, chesnut, pecan, ginger, blonde, sand, apricot, fire, auburn, copper, walnut, mist, silver, platinum, onyx
+    
+    var color: UIColor {
+        switch self {
+        case .ebony: return UIColor(hex: "#282c34")
+        case .chocolate: return UIColor(hex: "#3c1321")
+        case .cinnamon: return UIColor(hex: "#805b48")
+        case .hazelnut: return UIColor(hex: "#8f6553")
+        case .chesnut: return UIColor(hex: "#b6834f")
+        case .pecan: return UIColor(hex: "#a68966")
+        case .ginger: return UIColor(hex: "#97653c")
+        case .blonde: return UIColor(hex: "#d1b094")
+        case .sand: return UIColor(hex: "#fde38d")
+        case .apricot: return UIColor(hex: "#f8b878")
+        case .fire: return UIColor(hex: "#c25133")
+        case .auburn: return UIColor(hex: "#a15843")
+        case .copper: return UIColor(hex: "#73372d")
+        case .walnut: return UIColor(hex: "#d5c6b7")
+        case .mist: return UIColor(hex: "#bdc8bc")
+        case .silver: return UIColor(hex: "#b5b5bd")
+        case .platinum: return UIColor(hex: "#e0dccb")
+        case .onyx: return UIColor(hex: "#000000")
+        }
+    }
+    
+    var localized: String { return localizedString("hair\(rawValue)") }
+}
+
+enum ShirtColor: Int, Codable, CaseIterable {
+    case blue, green, indigo, orange, pink, purple, red, teal, yellow, white, black
+    
+    var color: UIColor {
+        switch self {
+        case .blue: return UIColor(hex: "#0a84ff")
+        case .green: return UIColor(hex: "#30d158")
+        case .indigo: return UIColor(hex: "#5e5ce6")
+        case .orange: return UIColor(hex: "#ff9f0a")
+        case .pink: return UIColor(hex: "#ff375f")
+        case .purple: return UIColor(hex: "#bf5af2")
+        case .red: return UIColor(hex: "#ff453a")
+        case .teal: return UIColor(hex: "#64d2ff")
+        case .yellow: return UIColor(hex: "#ffd60a")
+        case .white: return UIColor(hex: "#e5e5ea")
+        case .black: return UIColor(hex: "#2c2c2e")
+        }
+    }
+    
+    var localized: String { return localizedString("shirt\(rawValue)") }
+}
+
+enum HairStyle: Int, Codable, CaseIterable {
+    case one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thriteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty
+    
+    var image: UIImage? { return UIImage(hairStyle: self, hairColor: .onyx) }
+    var localized: String { return localizedString("style\(rawValue)") }
+}
+
 
 class Terrain: NSObject, Codable {
     let id: String
@@ -82,8 +168,22 @@ class Terrain: NSObject, Codable {
     }
 }
 
-enum TerrainSize: Float, Codable, CaseIterable {
-    case tiny = 2, small = 4, medium = 6, large = 8, huge = 10, extreme = 12
+enum TerrainSize: Int, Codable, CaseIterable {
+    case tiny, small, medium, large, huge, extreme
+    
+    var icon: String {
+        switch self {
+        case .tiny: return "0.circle"
+        case .small: return "1.circle"
+        case .medium: return "2.circle"
+        case .large: return "3.circle"
+        case .huge: return "4.circle"
+        case .extreme: return "5.circle"
+        }
+    }
+    
+    var scale: Int { rawValue*2 + 4 }
+    var localized: String { return localizedString("size\(rawValue)") }
 }
 
 enum TerrainType: Int, Codable, CaseIterable {
@@ -108,13 +208,4 @@ enum TerrainType: Int, Codable, CaseIterable {
     }
     
     var localized: String { return localizedString("terrain\(rawValue)")}
-}
-
-enum Icon: String, Codable, CaseIterable  {
-    case a0 = "👶", a1 = "🧒", a2 = "👦", a3 = "👧", a4 = "🧑", a5 = "👨", a6 = "👩", a7 = "🧑‍🦱", a8 = "👨‍🦱", a9 = "👩‍🦱", a10 = "🧑‍🦰", a11 = "👨‍🦰", a12 = "👩‍🦰", a13 = "👱", a14 = "👱‍♂️", a15 = "👱‍♀️", a16 = "🧑‍🦳", a17 = "👩‍🦳", a18 = "👨‍🦳", a19 = "👨‍🦲", a20 = "🧑‍🦲", a21 = "👩‍🦲", a22 = "🧔", a23 = "🧓", a24 = "👴", a25 = "👵"
-    case b0 = "👶🏻", b1 = "🧒🏻", b2 = "👦🏻", b3 = "👧🏻", b4 = "🧑🏻", b5 = "👨🏻", b6 = "👩🏻", b7 = "🧑🏻‍🦱", b8 = "👨🏻‍🦱", b9 = "👩🏻‍🦱", b10 = "🧑🏻‍🦰", b11 = "👨🏻‍🦰", b12 = "👩🏻‍🦰", b13 = "👱🏻", b14 = "👱🏻‍♂️", b15 = "👱🏻‍♀️", b16 = "🧑🏻‍🦳", b17 = "👩🏻‍🦳", b18 = "👨🏻‍🦳", b19 = "🧑🏻‍🦲", b20 = "👨🏻‍🦲", b21 = "👩🏻‍🦲", b22 = "🧔🏻", b23 = "🧓🏻", b24 = "👴🏻", b25 = "👵🏻"
-    case c0 = "👶🏼", c1 = "🧒🏼", c2 = "👦🏼", c3 = "👧🏼", c4 = "🧑🏼", c5 = "👨🏼", c6 = "👩🏼", c7 = "🧑🏼‍🦱", c8 = "👨🏼‍🦱", c9 = "👩🏼‍🦱", c10 = "🧑🏼‍🦰", c11 = "👨🏼‍🦰", c12 = "👩🏼‍🦰", c13 = "👱🏼", c14 = "👱🏼‍♂️", c15 = "👱🏼‍♀️", c16 = "🧑🏼‍🦳", c17 = "👩🏼‍🦳", c18 = "👨🏼‍🦳", c19 = "🧑🏼‍🦲", c20 = "👨🏼‍🦲", c21 = "👩🏼‍🦲", c22 = "🧔🏼", c23 = "🧓🏼", c24 = "👴🏼", c25 = "👵🏼"
-    case d0 = "👶🏽", d1 = "🧒🏽", d2 = "👦🏽", d3 = "👧🏽", d4 = "🧑🏽", d5 = "👨🏽", d6 = "👩🏽", d7 = "🧑🏽‍🦱", d8 = "👨🏽‍🦱", d9 = "👩🏽‍🦱", d10 = "🧑🏽‍🦰", d11 = "👨🏽‍🦰", d12 = "👩🏽‍🦰", d13 = "👱🏽", d14 = "👱🏽‍♂️", d15 = "👱🏽‍♀️", d16 = "🧑🏽‍🦳", d17 = "👩🏽‍🦳", d18 = "👨🏽‍🦳", d19 = "🧑🏽‍🦲", d20 = "👨🏽‍🦲", d21 = "👩🏽‍🦲", d22 = "🧔🏽", d23 = "🧓🏽", d24 = "👴🏽", d25 = "👵🏽"
-    case e0 = "👶🏾", e1 = "🧒🏾", e2 = "👦🏾", e3 = "👧🏾", e4 = "🧑🏾", e5 = "👨🏾", e6 = "👩🏾", e7 = "🧑🏾‍🦱", e8 = "👨🏾‍🦱", e9 = "👩🏾‍🦱", e10 = "🧑🏾‍🦰", e11 = "👨🏾‍🦰", e12 = "👩🏾‍🦰", e13 = "👱🏾", e14 = "👱🏾‍♂️", e15 = "👱🏾‍♀️", e16 = "🧑🏾‍🦳", e17 = "👩🏾‍🦳", e18 = "👨🏾‍🦳", e19 = "🧑🏾‍🦲", e20 = "👨🏾‍🦲", e21 = "👩🏾‍🦲", e22 = "🧔🏾", e23 = "🧓🏾", e24 = "👴🏾", e25 = "👵🏾"
-    case f0 = "👶🏿", f1 = "🧒🏿", f2 = "👦🏿", f3 = "👧🏿", f4 = "🧑🏿", f5 = "👨🏿", f6 = "👩🏿", f7 = "🧑🏿‍🦱", f8 = "👨🏿‍🦱", f9 = "👩🏿‍🦱", f10 = "🧑🏿‍🦰", f11 = "👨🏿‍🦰", f12 = "👩🏿‍🦰", f13 = "👱🏿", f14 = "👱🏿‍♂️", f15 = "👱🏿‍♀️", f16 = "🧑🏿‍🦳", f17 = "👩🏿‍🦳", f18 = "👨🏿‍🦳", f19 = "🧑🏿‍🦲", f20 = "👨🏿‍🦲", f21 = "👩🏿‍🦲", f22 = "🧔🏿", f23 = "🧓🏿", f24 = "👴🏿", f25 = "👵🏿"
 }

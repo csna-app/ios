@@ -6,12 +6,89 @@
   
 */
 
+"remove" = "Remove";
+"ok" = "Ok";
+"cancel" = "Cancel";
+
 "export0" = "Export TXT";
 "export1" = "Export CSV Groups";
 "export2" = "Export JSON";
 "export3" = "Export CSV Actors";
+
 "addActor" = "Add Actor";
 "addTerrain" = "Add Terrain";
+
+"name" = "Name";
+"style" = "Hairstyle";
+"skin" = "Skincolor";
+"hair" = "Haircolor";
+"shirt" = "Shirtcolor";
+"size" = "Size";
+"type" = "Type";
+
+"terrain0" = "Bookcase";
+"terrain1" = "Wardrobe";
+"terrain2" = "Building";
+"terrain3" = "Temple";
+"terrain4" = "Bed";
+"terrain5" = "Television";
+"terrain6" = "Computer";
+"terrain7" = "Radio";
+"terrain8" = "Instruments";
+"terrain9" = "Games";
+"terrain10" = "Painting";
+"terrain11" = "Rectangle";
+"terrain12" = "Circle";
+
+"size0" = "Tiny";
+"size1" = "Small";
+"size2" = "Medium";
+"size3" = "Large";
+"size4" = "Huge";
+"size5" = "Extreme";
+
+"shirt0" = "Blue";
+"shirt1" = "Green";
+"shirt2" = "Indigo";
+"shirt3" = "Orange";
+"shirt4" = "Pink";
+"shirt5" = "Purple";
+"shirt6" = "Red";
+"shirt7" = "Teal";
+"shirt8" = "Yellow";
+"shirt9" = "White";
+"shirt10" = "Black";
+
+"hair0" = "Ebony";
+"hair1" = "Chocolate";
+"hair2" = "Cinnamon";
+"hair3" = "Hazelnut";
+"hair4" = "Chesnut";
+"hair5" = "Pecan";
+"hair6" = "Ginger";
+"hair7" = "Blond";
+"hair8" = "Sand";
+"hair9" = "Apricot";
+"hair10" = "Fire";
+"hair11" = "Auburn";
+"hair12" = "Copper";
+"hair13" = "Walnut";
+"hair14" = "Mist";
+"hair15" = "Silver";
+"hair16" = "Platinum";
+"hair17" = "Onyx";
+
+"skin0" = "Silk";
+"skin1" = "Lumber";
+"skin2" = "Peach";
+"skin3" = "Eggshell";
+"skin4" = "Spice";
+"skin5" = "Sienna";
+"skin6" = "Oak";
+"skin7" = "Clay";
+"skin8" = "Coffee";
+
+
 
 "copyright" = "Wilhelm Thieme 2020 ©\nAll Rights Reserved";
 

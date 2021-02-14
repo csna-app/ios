@@ -1,55 +1,75 @@
-import SpriteKit
+import UIKit
 
-class Node: SKNode {
+class Node: UIButton {
     
-    func startWiggle() {
-        let wiggleIn = SKAction.rotate(byAngle: -0.05, duration: 0.1)
-        let wiggleMid = SKAction.rotate(byAngle: 0.1, duration: 0.2)
-        let wiggleOut = SKAction.rotate(byAngle: -0.05, duration: 0.1)
-        let wiggle = SKAction.sequence([wiggleIn, wiggleMid, wiggleOut])
-        
-        run(SKAction.repeatForever(wiggle), withKey: "wiggle")
+    init(context: UIMenu) {
+        super.init(frame: .zero)
+        menu = context
+        isUserInteractionEnabled = false
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        superview?.touchesBegan(touches, with: event)
+    }
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        superview?.touchesMoved(touches, with: event)
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        superview?.touchesEnded(touches, with: event)
+    }
+
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        superview?.touchesCancelled(touches, with: event)
     }
     
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func startWiggle() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        animation.timingFunction = CAMediaTimingFunction(name: .linear)
+        animation.values = [0, -0.05, 0, 0.05, 0]
+        animation.duration = 0.4
+        animation.repeatCount = .infinity
+        layer.add(animation, forKey: "wiggle")
+    }
+
     func stopWiggle() {
-        zRotation = 0
-        removeAction(forKey: "wiggle")
+        layer.removeAnimation(forKey: "wiggle")
     }
     
 }
 
 class ANode: Node {
-    static let name = "ActorNode"
     
-    private let iconNode = SKLabelNode(fontNamed: "Helvetica")
-    private let nameNode = SKLabelNode(fontNamed: "Helvetica")
+    private let iconView = UIImageView()
+    private let nameView = UILabel()
     
-    init(icon: String, title: String, location: CGPoint) {
-        super.init()
-        name = ANode.name
+    init(image: UIImage?, title: String, location: CGPoint, menu: UIMenu) {
+        super.init(context: menu)
+        let dim = UIDevice.current.userInterfaceIdiom == .pad ? 50 : 30
+        layer.zPosition = 2
         
-        position = location
-        zPosition = 2
+        iconView.image = image
+        iconView.frame.size = CGSize(width: dim, height: dim)
+
+        nameView.text = title
+        nameView.font = UIFont.systemFont(ofSize: UIDevice.current.userInterfaceIdiom == .pad ? UIFont.systemFontSize : UIFont.smallSystemFontSize)
+        nameView.textAlignment = .center
+        nameView.sizeToFit()
+
+        frame.size = CGSize(width: max(iconView.frame.width, nameView.frame.width), height: iconView.frame.height + nameView.frame.height)
         
-        iconNode.text = icon
-        iconNode.fontSize = UIDevice.current.userInterfaceIdiom == .pad ? UIFont.labelFontSize * 3 : UIFont.labelFontSize
-        iconNode.verticalAlignmentMode = .center
-        iconNode.horizontalAlignmentMode = .center
-        iconNode.position = CGPoint(x: 0, y: 0)
-        addChild(iconNode)
+        addSubview(iconView)
+        nameView.center = CGPoint(x: bounds.width*0.5, y: iconView.center.y + iconView.bounds.height*0.5 + nameView.bounds.height*0.5)
+        addSubview(nameView)
+        
+        center = location
 
-        nameNode.text = title
-        nameNode.fontColor = UIColor.label
-        nameNode.fontSize = UIDevice.current.userInterfaceIdiom == .pad ? UIFont.systemFontSize : UIFont.smallSystemFontSize
-        nameNode.verticalAlignmentMode = .center
-        nameNode.horizontalAlignmentMode = .center
-        nameNode.position = CGPoint(x: 0, y: UIDevice.current.userInterfaceIdiom == .pad ? -35 : -15)
-        addChild(nameNode)
-
-    }
-    
-    func traitCollectionsDidChange(to traitCollections: UITraitCollection) {
-        nameNode.fontColor = UIColor.label
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -58,61 +78,62 @@ class ANode: Node {
 }
 
 class TNode: Node {
-    static let name = "TerrainNode"
     
-    private let iconNode = SKSpriteNode()
+    private let iconView = UIImageView()
     
-    init(icon: String, scale: CGFloat, location: CGPoint) {
-        super.init()
-        name = TNode.name
-        
-        position = location
-        zPosition = 0
-        
+    init(icon: String, scale: CGFloat, location: CGPoint, menu: UIMenu) {
+        super.init(context: menu)
         let config = UIImage.SymbolConfiguration(pointSize: UIFont.labelFontSize*scale, weight: .thin)
         guard let image = UIImage(systemName: icon)?.applyingSymbolConfiguration(config) else { return }
-        let texture = SKTexture(image: image).applying(CIFilter(name: "CIColorInvert")!)
-        iconNode.texture = texture
-        iconNode.position = CGPoint(x: 0, y: 0)
-        iconNode.colorBlendFactor = 1
-        iconNode.color = .systemGray2
-        iconNode.size = CGSize(width: image.size.width, height: image.size.height)
-        addChild(iconNode)
+        
+        frame.size = image.size
+        
+        layer.zPosition = 0
+    
+        iconView.image = image
+        iconView.frame.size = image.size
+        iconView.tintColor = UIColor.systemGray2
+        addSubview(iconView)
+        
+        center = location
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func traitCollectionsDidChange(to traitCollections: UITraitCollection) {
-        iconNode.color = UIColor.systemGray2
-    }
-    
 }
 
-class LNode: SKShapeNode {
+class LNode: UIView {
     static let name = "LineNode"
     
     let firstNode: ANode
     let secondNode: ANode
+    private let shapeLayer = CAShapeLayer()
     
     init(_ node1: ANode, _ node2: ANode) {
         firstNode = node1
         secondNode = node2
-        super.init()
-        name = LNode.name
-        zPosition = 1
-        strokeColor = UIColor.systemGray4
-        lineWidth = UIDevice.current.userInterfaceIdiom == .pad ? 8 : 4
+        super.init(frame: .zero)
         
+        layer.zPosition = 1
+
+        shapeLayer.strokeColor = UIColor.systemGray4.cgColor
+        shapeLayer.lineWidth = UIDevice.current.userInterfaceIdiom == .pad ? 8 : 4
+        
+        layer.addSublayer(shapeLayer)
         updatePath()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        shapeLayer.strokeColor = UIColor.systemGray4.cgColor
     }
     
     func updatePath() {
         let bezier = UIBezierPath()
-        bezier.move(to: firstNode.position)
-        bezier.addLine(to: secondNode.position)
-        path = bezier.cgPath
+        bezier.move(to: firstNode.center)
+        bezier.addLine(to: secondNode.center)
+        shapeLayer.path = bezier.cgPath
     }
     
     func contains(_ node: ANode) -> Bool {
@@ -121,10 +142,6 @@ class LNode: SKShapeNode {
     
     func contains(where block: ((ANode) -> Bool)) -> Bool {
         return block(firstNode) || block(secondNode)
-    }
-    
-    func traitCollectionsDidChange(to traitCollections: UITraitCollection) {
-        strokeColor = UIColor.systemGray4
     }
     
     required init?(coder aDecoder: NSCoder) {

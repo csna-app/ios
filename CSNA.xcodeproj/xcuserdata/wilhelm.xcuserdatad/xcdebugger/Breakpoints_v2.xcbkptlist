@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "954214A8-3443-414D-80B6-9C3C4EF8EAB5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CSNA/Controller.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "viewDidLayoutSubviews()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "03D1CF2F-6892-4B81-AACE-33223A5F55FF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -46,8 +30,8 @@
             filePath = "CSNA/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "updateConnections(_:haptics:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +46,8 @@
             filePath = "CSNA/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "updateConnections(_:haptics:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +62,8 @@
             filePath = "CSNA/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "updateConnections(_:haptics:)"
             landmarkType = "7">
             <Locations>
@@ -141,8 +125,8 @@
             filePath = "CSNA/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "updateConnections(_:haptics:)"
             landmarkType = "7">
             <Locations>
@@ -204,8 +188,8 @@
             filePath = "CSNA/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "updateConnections(_:haptics:)"
             landmarkType = "7">
             <Locations>
@@ -267,8 +251,8 @@
             filePath = "CSNA/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "editingDidChange()"
             landmarkType = "7">
          </BreakpointContent>
@@ -283,41 +267,9 @@
             filePath = "CSNA/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "editingDidChange()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ABC6E182-7E85-45DA-A072-862B685F9164"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CSNA/Node.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "init(icon:scale:location:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DFF88CF4-0B3A-48C5-A23A-243BB91FCA22"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CSNA/Node.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "init(icon:scale:location:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -331,8 +283,8 @@
             filePath = "CSNA/Controller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "addTerrain(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -347,25 +299,9 @@
             filePath = "CSNA/Controller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "scene(tNodesFor:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "31DD2DDC-64D5-453D-9B86-591ABF50D7C2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CSNA/Node.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "init(icon:scale:location:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -379,73 +315,9 @@
             filePath = "CSNA/Node.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "init(icon:title:location:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "06246C82-479B-4913-AA3A-FCD9673E88FF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CSNA/Node.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "init(icon:scale:location:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FD70E513-AEE6-420E-8E19-15C2421C9E84"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CSNA/Controller.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "scene(_:showContextMenuFor:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0581A6B5-FBBC-49A9-ABEB-AE7D8FCF07E1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CSNA/Scene.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "openContextIfNeeded()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7BD11C7C-1D4A-4644-B867-8B36D3CC55F8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CSNA/Node.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "init(icon:scale:location:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "init(image:title:location:menu:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -459,8 +331,8 @@
             filePath = "CSNA/Controller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "scene(aNodesFor:)"
             landmarkType = "7">
             <Locations>
@@ -522,8 +394,8 @@
             filePath = "CSNA/Scene.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "reloadNodes()"
             landmarkType = "7">
             <Locations>
@@ -540,14 +412,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
                   endingLineNumber = "46"
-                  offsetFromSymbolStart = "663">
+                  offsetFromSymbolStart = "912">
                </Location>
                <Location
-                  uuid = "1DDF965D-07E8-4295-8E01-891881FBEA27 - 2255e5de3da7bb97"
+                  uuid = "1DDF965D-07E8-4295-8E01-891881FBEA27 - e76ff37d7f8d490"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Set&lt;CSNA.ANode&gt;) -&gt; Swift.Set&lt;CSNA.ANode&gt; in CSNA.Scene.reloadNodes() -&gt; ()"
+                  symbolName = "closure #2 (Swift.Set&lt;CSNA.ANode&gt;) -&gt; Swift.Set&lt;CSNA.ANode&gt; in CSNA.Scene.reloadNodes() -&gt; ()"
                   moduleName = "CSNA"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
@@ -558,11 +430,11 @@
                   offsetFromSymbolStart = "24">
                </Location>
                <Location
-                  uuid = "1DDF965D-07E8-4295-8E01-891881FBEA27 - 5d26d58d471dc2cf"
+                  uuid = "1DDF965D-07E8-4295-8E01-891881FBEA27 - f21d1244fbf39c8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (CSNA.ANode) -&gt; () in CSNA.Scene.reloadNodes() -&gt; ()"
+                  symbolName = "closure #3 (CSNA.ANode) -&gt; () in CSNA.Scene.reloadNodes() -&gt; ()"
                   moduleName = "CSNA"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
@@ -573,6 +445,740 @@
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34FAED71-3D59-4978-8205-B62F74D453C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Scene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "reloadNodes()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "34FAED71-3D59-4978-8205-B62F74D453C9 - 63ebd0e3158736dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSNA.Scene.reloadNodes() -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1436">
+               </Location>
+               <Location
+                  uuid = "34FAED71-3D59-4978-8205-B62F74D453C9 - 2d47bd11455f8d07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (CSNA.TNode) -&gt; () in CSNA.Scene.reloadNodes() -&gt; ()"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Scene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29B87DEB-0789-42DB-9642-5C6492FFA761"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Node.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "touchesBegan(_:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6439EFB-3C8C-41DB-92C2-8D672C1E5920"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Controller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "removeNode(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "581DF7EA-169B-4BCC-A191-CB5855E04D44"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "init(from:scale:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6594FD6A-4072-40D1-AA7A-C7C8774B39B9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "parameterExtract(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5F48065-D93D-4468-97F8-AC124B427C76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "init(hairStyle:hairColor:skinColor:shirtColor:size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "init(from:scale:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "2191">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "2692">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "3193">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "3395">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "3672">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "4173">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "4674">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "5175">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "5676">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "6177">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "6678">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "7179">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "7680">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "8181">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "8682">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "9183">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "9684">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "9900">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "10116">
+               </Location>
+               <Location
+                  uuid = "D28D452D-73AC-4436-A0F3-1570398BDA80 - afa9c4d69b67b232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "10332">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D50E9AE-2DED-45AA-BBEE-9A352C6C216A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "init(from:scale:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2DE4A44-88F1-41DE-9B7A-C94E32C62817"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "parameterExtract(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2DE4A44-88F1-41DE-9B7A-C94E32C62817 - ab5a6a2c309584ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.(parameterExtract in _D80FC89D07EA9F40CA1B107A0DFE1DAB)(_: Swift.String, scale: CoreGraphics.CGFloat) -&gt; Swift.Array&lt;CoreGraphics.CGFloat&gt;"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "2184">
+               </Location>
+               <Location
+                  uuid = "B2DE4A44-88F1-41DE-9B7A-C94E32C62817 - 728d036882aa9ed9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CoreGraphics.CGFloat) -&gt; CoreGraphics.CGFloat in (extension in CSNA):__C.UIBezierPath.(parameterExtract in _D80FC89D07EA9F40CA1B107A0DFE1DAB)(_: Swift.String, scale: CoreGraphics.CGFloat) -&gt; Swift.Array&lt;CoreGraphics.CGFloat&gt;"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A82FE797-F68C-4C2E-99D5-4DAE0632E65B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "init(hairStyle:hairColor:skinColor:shirtColor:size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD238ECC-BD60-4E6F-8879-7889E6B5BE8C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "init(hairStyle:hairColor:skinColor:shirtColor:size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF06038F-19D4-4944-AFEF-52D1A14BBD6C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "init(hairStyle:hairColor:skinColor:shirtColor:size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79FC2419-1CA5-46ED-A3C6-EC9B390BA84D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "init(hairStyle:hairColor:skinColor:shirtColor:size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E3CB5F5-D8FF-42E8-A280-4E40783F4241"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "init(hairStyle:hairColor:skinColor:shirtColor:size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC9C9DC9-D4E3-4F1C-A6D0-47D6D4FF08DF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Node.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "init(image:title:location:menu:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40A4B9C7-CFA9-4B4E-B704-789DCACFDA09"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Node.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "init(image:title:location:menu:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9D8555E-553F-49B0-A783-DB261A2DE7B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "init(hairStyle:hairColor:skinColor:shirtColor:size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F739A10F-CA63-4AAA-A37E-FDD4B06EB989"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "init(hairStyle:hairColor:skinColor:shirtColor:size:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55BE2E45-AF28-48CD-BAD0-9CC06FB6FA17"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "init(from:scale:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9B7F5E6-C207-47DF-9F18-FF55CCC99998"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "init(from:scale:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9B7F5E6-C207-47DF-9F18-FF55CCC99998 - afa9c4d69b67b211"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "1654">
+               </Location>
+               <Location
+                  uuid = "D9B7F5E6-C207-47DF-9F18-FF55CCC99998 - 68863b03c1cf021e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (CoreGraphics.CGFloat) -&gt; CoreGraphics.CGFloat in (extension in CSNA):__C.UIBezierPath.init(from: Swift.String, scale: CoreGraphics.CGFloat) -&gt; __C.UIBezierPath"
+                  moduleName = "CSNA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wilhelm/XcodeProjects/CSNA/CSNA/Draw.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13FE100C-6B4E-4FED-8D63-949D7EB5ED83"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSNA/Draw.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "init(from:scale:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

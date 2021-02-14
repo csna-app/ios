@@ -15,8 +15,8 @@
                 <outlet property="activityIndicator" destination="3Ld-Hc-IA3" id="0xY-Ll-2Bp"/>
                 <outlet property="addButton" destination="wn1-Dk-bWx" id="qZd-fL-Zrl"/>
                 <outlet property="editButton" destination="Zam-Ws-d6D" id="cVD-tv-333"/>
-                <outlet property="mainView" destination="3bD-ft-mZG" id="ce2-9v-3A2"/>
                 <outlet property="pauseButton" destination="dod-vQ-Mdp" id="klL-90-jm6"/>
+                <outlet property="scene" destination="S6E-hx-4sY" id="aQk-TC-ugi"/>
                 <outlet property="shareButton" destination="Ke3-5c-jbY" id="l8B-hg-Ch9"/>
                 <outlet property="titleLabel" destination="lPf-gO-ZHf" id="Ppl-eY-vhv"/>
                 <outlet property="view" destination="iN0-l3-epB" id="EBE-Ce-rGx"/>
@@ -116,9 +116,13 @@
                         <constraint firstItem="Zam-Ws-d6D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lPf-gO-ZHf" secondAttribute="trailing" constant="12" id="zB4-xX-Ofg"/>
                     </constraints>
                 </view>
-                <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bD-ft-mZG" userLabel="Main">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6E-hx-4sY" userLabel="Scene" customClass="Scene" customModule="CSNA" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="55" width="375" height="612"/>
-                </skView>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="vWA-xx-Cfp"/>
+                    </connections>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="copyright" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbU-RQ-unn" userLabel="Copyright">
                     <rect key="frame" x="292.5" y="641" width="57.5" height="16"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
@@ -134,19 +138,19 @@
             <constraints>
                 <constraint firstItem="Xa0-Ly-XZi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="24r-qe-HgM"/>
                 <constraint firstAttribute="trailing" secondItem="Xa0-Ly-XZi" secondAttribute="trailing" id="5fd-aN-Xa9"/>
+                <constraint firstItem="S6E-hx-4sY" firstAttribute="top" secondItem="l3f-6B-daM" secondAttribute="bottom" id="Euk-zA-5pm"/>
+                <constraint firstItem="S6E-hx-4sY" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="I2O-u8-9RT"/>
                 <constraint firstAttribute="bottom" secondItem="cbU-RQ-unn" secondAttribute="bottom" constant="10" id="JKG-nQ-MhN"/>
                 <constraint firstItem="l3f-6B-daM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Jgt-RV-E1m"/>
-                <constraint firstItem="3bD-ft-mZG" firstAttribute="top" secondItem="l3f-6B-daM" secondAttribute="bottom" id="Jzw-pg-RQD"/>
-                <constraint firstAttribute="trailing" secondItem="3bD-ft-mZG" secondAttribute="trailing" id="L0i-X2-IA4"/>
-                <constraint firstItem="3bD-ft-mZG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PhG-3f-tb4"/>
                 <constraint firstAttribute="trailing" secondItem="cbU-RQ-unn" secondAttribute="trailing" constant="25" id="Qhm-Kw-KaG"/>
-                <constraint firstAttribute="bottom" secondItem="3bD-ft-mZG" secondAttribute="bottom" id="Rev-Vy-Sjs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l3f-6B-daM" secondAttribute="trailing" id="e0h-ct-uYi"/>
                 <constraint firstItem="l3f-6B-daM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="f8J-sw-8gK"/>
+                <constraint firstItem="S6E-hx-4sY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fk8-NT-dgz"/>
                 <constraint firstItem="Xa0-Ly-XZi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="s7q-v3-v1n"/>
+                <constraint firstItem="S6E-hx-4sY" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="uET-rR-DGq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="Xa0-Ly-XZi" secondAttribute="bottom" id="xQv-4e-08X"/>
             </constraints>
-            <point key="canvasLocation" x="-197.66355140186914" y="73.866090712742988"/>
+            <point key="canvasLocation" x="-199.19999999999999" y="73.313343328335833"/>
         </view>
     </objects>
     <resources>

@@ -69,8 +69,8 @@ class Service {
     static var terrain: [Terrain] { return Array(shared.model.terrains).sorted(by: { $0.id > $1.id }) }
     static var lastGroups: [[Actor]]  { return shared.model.transactions.last?.map { $0.compactMap { shared.model.getActor($0) } } ?? [] }
     
-    static func addActor() {
-        let actor = Actor()
+    static func addActor(gender: HairStyle) {
+        let actor = Actor(sex: gender)
         shared.model.add(actor: actor)
         addTransaction(lastGroups + [[actor]])
         shared.saveModel()

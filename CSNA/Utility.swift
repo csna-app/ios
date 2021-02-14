@@ -13,7 +13,6 @@ func localizedString(_ key: String, _ options: String...) -> String {
     return string
 }
 
-
 extension NSLayoutConstraint {
     @discardableResult func activate(_ prio: UILayoutPriority = .required) -> NSLayoutConstraint {
         self.priority = prio
@@ -21,10 +20,6 @@ extension NSLayoutConstraint {
         return self
     }
     
-}
-
-extension UIColor {
-    static let accentColor = UIColor(named: "AccentColor")
 }
 
 extension CGPoint {
@@ -54,6 +49,12 @@ extension Array where Element: Hashable {
         return result
     }
     
+}
+
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).compactMap { $0 + size <= count ? Array(self[$0..<($0 + size)]) : nil }
+    }
 }
 
 extension Dictionary where Key: Comparable {
