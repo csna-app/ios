@@ -59,34 +59,37 @@ extension UIImage {
     convenience init?(hairStyle: HairStyle, hairColor: HairColor, skinColor: SkinColor? = nil, shirtColor: ShirtColor? = nil, size: CGFloat = 50) {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: size, height: size))
         let image = renderer.image { context in
+            context.cgContext.setLineWidth(0.01*size)
+            context.cgContext.setStrokeColor(UIColor.black.cgColor)
+            
             if let skinColor = skinColor?.color {
                 context.cgContext.setFillColor(skinColor.cgColor)
                 let head1 = UIBezierPath(from: Styles.get("headPart1"), scale: size)
                 context.cgContext.addPath(head1.cgPath)
                 context.cgContext.drawPath(using: .fill)
-                
+
                 context.cgContext.setFillColor(skinColor.darken(by: 0.1).cgColor)
                 let head2 = UIBezierPath(from: Styles.get("headPart2"), scale: size)
                 context.cgContext.addPath(head2.cgPath)
                 context.cgContext.drawPath(using: .fill)
             }
-            
+
             if let shirtColor = shirtColor?.color {
                 context.cgContext.setFillColor(shirtColor.cgColor)
                 let shirt = UIBezierPath(from: Styles.get("shirt"), scale: size)
                 context.cgContext.addPath(shirt.cgPath)
                 context.cgContext.drawPath(using: .fill)
             }
-            
+
             context.cgContext.setFillColor(hairColor.color.cgColor)
             let hair1 = UIBezierPath(from: Styles.get("style\(hairStyle.rawValue)"), scale: size)
             context.cgContext.addPath(hair1.cgPath)
-            context.cgContext.drawPath(using: .fill)
+            context.cgContext.drawPath(using: .fillStroke)
 
             context.cgContext.setFillColor(hairColor.color.darken(by: 0.1).cgColor)
-            let hair2 = UIBezierPath(from: Styles.get("style\(hairStyle.rawValue)Part2"), scale: size)
+            let hair2 = UIBezierPath(from: Styles.get("style\(hairStyle.rawValue)part2"), scale: size)
             context.cgContext.addPath(hair2.cgPath)
-            context.cgContext.drawPath(using: .fill)
+            context.cgContext.drawPath(using: .fillStroke)
 
         }
         guard let cg = image.cgImage else { return nil }
@@ -121,10 +124,10 @@ extension UIBezierPath {
             case "S": params.chunked(into: 4).forEach { addCurve(to: abs(x: $0[2], y: $0[3]), controlPoint1: abs(x: $0[0], y: $0[1]), controlPoint2: abs(x: $0[0], y: $0[1])) }
             case "q": params.chunked(into: 4).forEach { addQuadCurve(to: rel(x: $0[2], y: $0[3]), controlPoint: rel(x: $0[0], y: $0[1])) }
             case "Q": params.chunked(into: 4).forEach { addQuadCurve(to: abs(x: $0[2], y: $0[3]), controlPoint: abs(x: $0[0], y: $0[1])) }
-            case "t": break
-            case "T": break
-            case "a": break
-            case "A": break
+            case "t": break //TODO: quad shorthand rel <-
+            case "T": break //TODO: quad shorthand abs <-
+            case "a": break //TODO: arc rel <-
+            case "A": break //TODO: arc rel <-
             default: break
             }
             svg.removeSubrange(range)

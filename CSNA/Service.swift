@@ -96,6 +96,7 @@ class Service {
     }
 
     static func reset() {
+        shared.isPaused = true
         shared.model = Model()
         shared.saveModel()
     }
@@ -137,7 +138,7 @@ class Service {
             return try? JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys])
         case .csvActor:
             let string = values.map({ "\($0.0),\($0.1.map({ $0.joined(separator: ";") }).joined(separator: ","))" }).joined(separator: "\n")
-            return string.data(using: .utf8)
+            return string.data(using: .utf8) //TODO: <- Impl
         }
     }
     

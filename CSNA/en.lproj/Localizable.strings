@@ -9,6 +9,8 @@
 "remove" = "Remove";
 "ok" = "Ok";
 "cancel" = "Cancel";
+"reset" = "Restart";
+"resetMessage" = "This action cannot be undone";
 
 "export0" = "Export TXT";
 "export1" = "Export CSV Groups";
@@ -88,7 +90,36 @@
 "skin7" = "Clay";
 "skin8" = "Coffee";
 
-
+"style0" = "a";
+"style1" = "b";
+"style2" = "c";
+"style3" = "d";
+"style4" = "e";
+"style5" = "f";
+"style6" = "g";
+"style7" = "h";
+"style8" = "i";
+"style9" = "j";
+"style10" = "k";
+"style11" = "l";
+"style12" = "m";
+"style13" = "n";
+"style14" = "o";
+"style15" = "p";
+"style16" = "q";
+"style17" = "r";
+"style18" = "s";
+"style19" = "t";
+"style20" = "u";
+"style21" = "v";
+"style22" = "w";
+"style23" = "x";
+"style24" = "y";
+"style25" = "z";
+"style26" = "aa";
+"style27" = "ab";
+"style28" = "ac";
+"style29" = "ad";
 
 "copyright" = "Wilhelm Thieme 2020 ©\nAll Rights Reserved";
 

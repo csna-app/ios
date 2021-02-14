@@ -31,7 +31,9 @@ class Controller: UIViewController, SceneDelegate {
         super.viewDidLoad()
 
         let shareItems = ExportType.allCases.map({ e in UIAction(title: e.name, image: e.icon, handler: { [weak self] _ in self?.export(with: e)  }) })
-        shareButton.menu = UIMenu(title: "", children: shareItems)
+        let shareItem = UIMenu(title: "", image: nil, options: .displayInline, children: shareItems)
+        let resetItem = UIAction(title: localizedString("reset"), image: UIImage(systemName: "xmark.square"), attributes: .destructive, handler: { [weak self] _ in self?.askToReset() })
+        shareButton.menu = UIMenu(title: "", children: [shareItem, resetItem])
         shareButton.showsMenuAsPrimaryAction = true
         
         let actorImage = UIImage(systemName: "person.crop.circle.badge.plus")
@@ -110,6 +112,21 @@ class Controller: UIViewController, SceneDelegate {
         if scene.isEditing { editButtonPressed() }
         Service.isPaused = !Service.isPaused
         pauseButton.setImage(UIImage(systemName: Service.isPaused ? "play.fill" : "pause.fill"), for: .normal)
+    }
+    
+    private func askToReset() {
+        let alert = UIAlertController(title: localizedString("reset"), message: localizedString("resetMessage"), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: localizedString("ok"), style: .destructive, handler: { [weak self] _ in self?.reset() }))
+        alert.addAction(UIAlertAction(title: localizedString("cancel"), style: .cancel, handler: nil))
+        alert.view.tintColor = UIColor(named: "AccentColor")
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func reset() {
+        pauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        Service.reset()
+        scene.reloadNodes()
+        tickerDidTick()
     }
     
     private func addActor(_ gender: HairStyle) {

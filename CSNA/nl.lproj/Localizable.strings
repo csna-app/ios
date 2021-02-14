@@ -9,6 +9,8 @@
 "remove" = "Verwijderen";
 "ok" = "Ok";
 "cancel" = "Annuleren";
+"reset" = "Herstarten";
+"resetMessage" = "Deze actie kan niet ongedaan gemaakt worden";
 
 "export0" = "Exporteer TXT";
 "export1" = "Exporteer CSV Groepen";
@@ -87,8 +89,6 @@
 "skin6" = "Eiken";
 "skin7" = "Klei";
 "skin8" = "Koffie";
-
-
 
 "copyright" = "Wilhelm Thieme 2020 ©\nAlle rechten voorbehouden";
 

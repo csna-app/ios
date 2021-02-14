@@ -51,10 +51,11 @@ class ANode: Node {
     
     init(image: UIImage?, title: String, location: CGPoint, menu: UIMenu) {
         super.init(context: menu)
-        let dim = UIDevice.current.userInterfaceIdiom == .pad ? 50 : 30
+        let dim = UIDevice.current.userInterfaceIdiom == .pad ? 70 : 40
         layer.zPosition = 2
         
         iconView.image = image
+        iconView.contentMode = .scaleAspectFit
         iconView.frame.size = CGSize(width: dim, height: dim)
 
         nameView.text = title
@@ -91,6 +92,7 @@ class TNode: Node {
         layer.zPosition = 0
     
         iconView.image = image
+        iconView.contentMode = .scaleAspectFit
         iconView.frame.size = image.size
         iconView.tintColor = UIColor.systemGray2
         addSubview(iconView)
