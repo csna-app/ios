@@ -145,7 +145,7 @@ enum ShirtColor: Int, Codable, CaseIterable {
 }
 
 enum HairStyle: Int, Codable, CaseIterable {
-    case one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thriteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty
+    case one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thriteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty, thirtyone
     
     var image: UIImage? { return UIImage(hairStyle: self, hairColor: .onyx) }
     var localized: String { return localizedString("style\(rawValue)") }
