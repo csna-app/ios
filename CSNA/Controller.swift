@@ -12,6 +12,7 @@ class Controller: UIViewController, SceneDelegate {
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var scene: Scene!
     private var alert: UIAlertController?
+    private var oldFrame = CGRect.zero
     
     private var aMenu: UIMenu!
     private var tMenu: UIMenu!
@@ -66,12 +67,16 @@ class Controller: UIViewController, SceneDelegate {
         
         aMenu = UIMenu(title: "", children: [nameItem, skinItem, styleItem, hairItem, shirtItem, removeItem])
         tMenu = UIMenu(title: "", children: [typeItem, sizeItem, removeItem])
-        
     }
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scene.reloadNodes()
+        if view.frame != oldFrame {
+            oldFrame = view.frame
+            scene.reloadNodes()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
