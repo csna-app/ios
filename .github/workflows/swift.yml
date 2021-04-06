@@ -6,13 +6,12 @@ on:
   pull_request:
     branches: [ main ]
     types: [opened, synchronize, reopened]
-    
-env:
-  XCODE_SCHEME: 'CSNA'
 
 jobs:
   build:
     runs-on: macos-latest
+    env:
+      XCODE_SCHEME: 'CSNA'
     steps:
     - uses: actions/checkout@v2
       with:
