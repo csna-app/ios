@@ -21,9 +21,9 @@ jobs:
         run: bash coverage build/Logs/Test/*.xcresult/ > code-coverage.xml
       - name: Upload Coverage
         uses: actions/upload-artifact@v2
-          with:
-            name: coverage
-            path: code-coverage.xml
+        with:
+          name: coverage
+          path: code-coverage.xml
 
   analyze:
     runs-on: ubuntu-latest
