@@ -1,4 +1,5 @@
 import UIKit
+import Algorithms
 
 fileprivate let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("model.json")
 
@@ -137,8 +138,8 @@ class Service {
             let dict = values.reduce(into: [:], { $0["\($1.key)"] = $1.value  })
             return try? JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys])
         case .csvActor:
-            let string = values.map({ "\($0.0),\($0.1.map({ $0.joined(separator: ";") }).joined(separator: ","))" }).joined(separator: "\n")
-            return string.data(using: .utf8) //TODO: <- Impl
+            let string = values.flatMap({ el in el.value.flatMap({ $0.combinations(ofCount: 2).map({ "\(el.key),\($0[0]),\($0[1])" }) }) }).joined(separator: "\n")
+            return string.data(using: .utf8)
         }
     }
     

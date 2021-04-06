@@ -3,7 +3,7 @@ set -euo pipefail
 
 function convert_file {
   local xccovarchive_file="$1"
-  local file_name="$2"
+  local file_name=$(realpath --relative-to=$(pwd) "$2")
   local xccov_options="$3"
   echo "  <file path=\"$file_name\">"
   xcrun xccov view $xccov_options --file "$file_name" "$xccovarchive_file" | \

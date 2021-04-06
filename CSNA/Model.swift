@@ -145,12 +145,11 @@ enum ShirtColor: Int, Codable, CaseIterable {
 }
 
 enum HairStyle: Int, Codable, CaseIterable {
-    case one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thriteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty, thirtyone
+    case fringe, sideTip, jheriCut, afro, slickBack, crewcut, frostedTips, spikes, sideFringe, taper, pushedBack, pompadour, quiff, bouffant, bun, flippedEnds, straightWings, ponytail, curlyPony, doubleBuns, wavyCut, middlePart, shagCut, straightBangs, sidePart, didoFlip, sideBangs, pixieCut, bobCut, straightBob, fullBangs
     
     var image: UIImage? { return UIImage(hairStyle: self, hairColor: .onyx) }
     var localized: String { return localizedString("style\(rawValue)") }
 }
-
 
 class Terrain: NSObject, Codable {
     let id: String

@@ -13,15 +13,6 @@ func localizedString(_ key: String, _ options: String...) -> String {
     return string
 }
 
-extension NSLayoutConstraint {
-    @discardableResult func activate(_ prio: UILayoutPriority = .required) -> NSLayoutConstraint {
-        self.priority = prio
-        self.isActive = true
-        return self
-    }
-    
-}
-
 extension CGPoint {
     func distance(to other: CGPoint) -> CGFloat {
         return sqrt(pow(other.x-x, 2)+pow(other.y-y, 2))
@@ -49,12 +40,6 @@ extension Array where Element: Hashable {
         return result
     }
     
-}
-
-extension Array {
-    func chunked(into size: Int) -> [[Element]] {
-        return stride(from: 0, to: count, by: size).compactMap { $0 + size <= count ? Array(self[$0..<($0 + size)]) : nil }
-    }
 }
 
 extension Dictionary where Key: Comparable {

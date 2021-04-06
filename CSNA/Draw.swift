@@ -1,4 +1,5 @@
 import UIKit
+import Algorithms
 
 extension UIColor {
     convenience init(hex: String) {
@@ -113,25 +114,29 @@ extension UIBezierPath {
             let range = svg.startIndex..<end
             let params = parameterExtract(String(svg[range])).map({ $0 * scale })
             switch instruction {
-            case "m": params.chunked(into: 2).forEach { move(to: rel(x: $0[0], y: $0[1])) }
-            case "M": params.chunked(into: 2).forEach { move(to: abs(x: $0[0], y: $0[1])) }
+            case "m": apply(params, 2) { move(to: rel(x: $0[0], y: $0[1])) }
+            case "M": apply(params, 2) { move(to: abs(x: $0[0], y: $0[1])) }
             case "z", "Z": close()
-            case "l": params.chunked(into: 2).forEach { addLine(to: rel(x: $0[0], y: $0[1])) }
-            case "L": params.chunked(into: 2).forEach { addLine(to: abs(x: $0[0], y: $0[1])) }
-            case "h": params.chunked(into: 1).forEach { addLine(to: rel(x: $0[0])) }
-            case "H": params.chunked(into: 1).forEach { addLine(to: abs(x: $0[0])) }
-            case "v": params.chunked(into: 1).forEach { addLine(to: rel(y: $0[0])) }
-            case "V": params.chunked(into: 1).forEach { addLine(to: abs(y: $0[0])) }
-            case "c": params.chunked(into: 6).forEach { addCurve(to: rel(x: $0[4], y: $0[5]), controlPoint1: rel(x: $0[0], y: $0[1]), controlPoint2: rel(x: $0[2], y: $0[3])) }
-            case "C": params.chunked(into: 6).forEach { addCurve(to: abs(x: $0[4], y: $0[5]), controlPoint1: abs(x: $0[0], y: $0[1]), controlPoint2: abs(x: $0[2], y: $0[3])) }
-            case "s": params.chunked(into: 4).forEach { addCurve(to: rel(x: $0[2], y: $0[3]), controlPoint1: rel(x: $0[0], y: $0[1]), controlPoint2: rel(x: $0[0], y: $0[1])) }
-            case "S": params.chunked(into: 4).forEach { addCurve(to: abs(x: $0[2], y: $0[3]), controlPoint1: abs(x: $0[0], y: $0[1]), controlPoint2: abs(x: $0[0], y: $0[1])) }
-            case "q": params.chunked(into: 4).forEach { addQuadCurve(to: rel(x: $0[2], y: $0[3]), controlPoint: rel(x: $0[0], y: $0[1])) }
-            case "Q": params.chunked(into: 4).forEach { addQuadCurve(to: abs(x: $0[2], y: $0[3]), controlPoint: abs(x: $0[0], y: $0[1])) }
+            case "l": apply(params, 2) { addLine(to: rel(x: $0[0], y: $0[1])) }
+            case "L": apply(params, 2) { addLine(to: abs(x: $0[0], y: $0[1])) }
+            case "h": apply(params, 1) { addLine(to: rel(x: $0[0])) }
+            case "H": apply(params, 1) { addLine(to: abs(x: $0[0])) }
+            case "v": apply(params, 1) { addLine(to: rel(y: $0[0])) }
+            case "V": apply(params, 1) { addLine(to: abs(y: $0[0])) }
+            case "c": apply(params, 6) { addCurve(to: rel(x: $0[4], y: $0[5]), controlPoint1: rel(x: $0[0], y: $0[1]), controlPoint2: rel(x: $0[2], y: $0[3])) }
+            case "C": apply(params, 6) { addCurve(to: abs(x: $0[4], y: $0[5]), controlPoint1: abs(x: $0[0], y: $0[1]), controlPoint2: abs(x: $0[2], y: $0[3])) }
+            case "s": apply(params, 4) { addCurve(to: rel(x: $0[2], y: $0[3]), controlPoint1: rel(x: $0[0], y: $0[1]), controlPoint2: rel(x: $0[0], y: $0[1])) }
+            case "S": apply(params, 4) { addCurve(to: abs(x: $0[2], y: $0[3]), controlPoint1: abs(x: $0[0], y: $0[1]), controlPoint2: abs(x: $0[0], y: $0[1])) }
+            case "q": apply(params, 4) { addQuadCurve(to: rel(x: $0[2], y: $0[3]), controlPoint: rel(x: $0[0], y: $0[1])) }
+            case "Q": apply(params, 4) { addQuadCurve(to: abs(x: $0[2], y: $0[3]), controlPoint: abs(x: $0[0], y: $0[1])) }
             default: break
             }
             svg.removeSubrange(range)
         }
+    }
+    
+    private func apply(_ params: [CGFloat], _ nparams: Int, _ block: (([CGFloat]) -> Void)) {
+        params.chunks(ofCount: nparams).forEach { if $0.count == nparams { block(Array($0)) } }
     }
     
     private func abs(x: CGFloat? = nil, y: CGFloat? = nil) -> CGPoint {

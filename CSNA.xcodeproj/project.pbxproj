@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,13 +19,16 @@
 		ED6C6F62255592FE004A2C69 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6F61255592FE004A2C69 /* Delegate.swift */; };
 		ED6C6F66255592FE004A2C69 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6F65255592FE004A2C69 /* Controller.swift */; };
 		ED6C6F6B25559300004A2C69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6C6F6A25559300004A2C69 /* Assets.xcassets */; };
-		ED6C6F6E25559300004A2C69 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6C6F6C25559300004A2C69 /* Launch.storyboard */; };
 		ED6C6FA02555939D004A2C69 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ED6C6F9F2555939D004A2C69 /* Settings.bundle */; };
 		ED6C6FA9255598E5004A2C69 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6FA8255598E5004A2C69 /* Service.swift */; };
 		ED6C6FAC25559BC6004A2C69 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6FAB25559BC6004A2C69 /* Model.swift */; };
 		ED6C6FAF2555A49D004A2C69 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6FAE2555A49D004A2C69 /* Utility.swift */; };
 		ED6C6FB22555A8E9004A2C69 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C6FB12555A8E9004A2C69 /* Scene.swift */; };
 		ED6C6FC1255705CB004A2C69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED6C6FC3255705CB004A2C69 /* Localizable.strings */; };
+		ED9F8C17261CDD7B00AC9638 /* LocalizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F8C16261CDD7B00AC9638 /* LocalizeTests.swift */; };
+		ED9F8C1F261CDEC900AC9638 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED9F8C1E261CDEC900AC9638 /* Launch.storyboard */; };
+		ED9F8C2A261CE4DD00AC9638 /* UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9F8C29261CE4DD00AC9638 /* UtilityTests.swift */; };
+		ED9F8C33261CEBAF00AC9638 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = ED9F8C32261CEBAF00AC9638 /* Algorithms */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +67,6 @@
 		ED6C6F61255592FE004A2C69 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		ED6C6F65255592FE004A2C69 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		ED6C6F6A25559300004A2C69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ED6C6F6D25559300004A2C69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		ED6C6F6F25559300004A2C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED6C6F9F2555939D004A2C69 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		ED6C6FA8255598E5004A2C69 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -73,6 +75,9 @@
 		ED6C6FB12555A8E9004A2C69 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		ED6C6FC2255705CB004A2C69 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED6C6FC5255705DA004A2C69 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ED9F8C16261CDD7B00AC9638 /* LocalizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeTests.swift; sourceTree = "<group>"; };
+		ED9F8C1E261CDEC900AC9638 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		ED9F8C29261CE4DD00AC9638 /* UtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9F8C33261CEBAF00AC9638 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,8 @@
 				ED00D17625DA709D003D0562 /* HexTests.swift */,
 				ED00D19425DA73EC003D0562 /* SVGTests.swift */,
 				ED00D1A125DAAEDC003D0562 /* StylesTests.swift */,
+				ED9F8C16261CDD7B00AC9638 /* LocalizeTests.swift */,
+				ED9F8C29261CE4DD00AC9638 /* UtilityTests.swift */,
 				ED00D19925DA7869003D0562 /* Utility.swift */,
 				ED00D17825DA709D003D0562 /* Info.plist */,
 			);
@@ -156,7 +164,7 @@
 				ED00D16D25D880CE003D0562 /* Styles.json */,
 				ED6C6FC3255705CB004A2C69 /* Localizable.strings */,
 				ED6C6F6A25559300004A2C69 /* Assets.xcassets */,
-				ED6C6F6C25559300004A2C69 /* Launch.storyboard */,
+				ED9F8C1E261CDEC900AC9638 /* Launch.storyboard */,
 				ED00D13825D6AADB003D0562 /* View.xib */,
 				ED6C6F9F2555939D004A2C69 /* Settings.bundle */,
 				ED6C6F6F25559300004A2C69 /* Info.plist */,
@@ -217,6 +225,9 @@
 			dependencies = (
 			);
 			name = CSNA;
+			packageProductDependencies = (
+				ED9F8C32261CEBAF00AC9638 /* Algorithms */,
+			);
 			productName = CSNA;
 			productReference = ED6C6F5E255592FE004A2C69 /* CSNA.app */;
 			productType = "com.apple.product-type.application";
@@ -253,6 +264,9 @@
 				nl,
 			);
 			mainGroup = ED6C6F55255592FE004A2C69;
+			packageReferences = (
+				ED9F8C31261CEBAF00AC9638 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = ED6C6F5F255592FE004A2C69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,9 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED6C6FC1255705CB004A2C69 /* Localizable.strings in Resources */,
+				ED9F8C1F261CDEC900AC9638 /* Launch.storyboard in Resources */,
 				ED00D16E25D880CE003D0562 /* Styles.json in Resources */,
 				ED00D13925D6AADB003D0562 /* View.xib in Resources */,
-				ED6C6F6E25559300004A2C69 /* Launch.storyboard in Resources */,
 				ED6C6FA02555939D004A2C69 /* Settings.bundle in Resources */,
 				ED6C6F6B25559300004A2C69 /* Assets.xcassets in Resources */,
 			);
@@ -321,8 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED00D19525DA73EC003D0562 /* SVGTests.swift in Sources */,
+				ED9F8C2A261CE4DD00AC9638 /* UtilityTests.swift in Sources */,
 				ED00D17725DA709D003D0562 /* HexTests.swift in Sources */,
 				ED00D19A25DA7869003D0562 /* Utility.swift in Sources */,
+				ED9F8C17261CDD7B00AC9638 /* LocalizeTests.swift in Sources */,
 				ED00D1A225DAAEDC003D0562 /* StylesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,14 +382,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ED6C6F6C25559300004A2C69 /* Launch.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED6C6F6D25559300004A2C69 /* Base */,
-			);
-			name = Launch.storyboard;
-			sourceTree = "<group>";
-		};
 		ED6C6FC3255705CB004A2C69 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -674,6 +682,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED9F8C31261CEBAF00AC9638 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED9F8C32261CEBAF00AC9638 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED9F8C31261CEBAF00AC9638 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED6C6F56255592FE004A2C69 /* Project object */;
 }
