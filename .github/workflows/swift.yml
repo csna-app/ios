@@ -8,7 +8,7 @@ on:
     types: [opened, synchronize, reopened]
     
 env:
-  SCHEME: 'CSNA'
+  XCODE_SCHEME: 'CSNA'
 
 jobs:
   build:
@@ -18,11 +18,11 @@ jobs:
       with:
         fetch-depth: 0
     - name: Clean
-      run: xcodebuild clean -scheme ${{ SCHEME }}
+      run: xcodebuild clean -scheme ${{ XCODE_SCHEME }}
     - name: Build
-      run: xcodebuild build -scheme ${{ SCHEME }}
+      run: xcodebuild build -scheme ${{ XCODE_SCHEME }}
     - name: Test
-      run: xcodebuild test -scheme ${{ SCHEME }}
+      run: xcodebuild test -scheme ${{ XCODE_SCHEME }}
     - name: Analyze
       uses: SonarSource/sonarcloud-github-action@master
       env:
