@@ -10,21 +10,29 @@ on:
 jobs:
   test:
     runs-on: macos-latest
+    outputs:
+      COVERAGE: ${{ steps.convert.outputs.coverage }}
     steps:
       - uses: actions/checkout@v2
       - name: Setup Xcode
         run: sudo xcode-select -switch /Applications/Xcode_12.4.app
       - name: Run Unit Tests
-        run: xcodebuild clean test -scheme CSNA -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 11
+        run: xcodebuild clean test -scheme CSNA -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 11 -derivedDataPath build
+      - name: Convert Coverage
+        id: convert
+        run: echo "::set-output name=coverage::$(bash coverage build/Logs/Test/*.xcresult/)"
 
   analyze:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
+      - name: Save Coverage
+        run: echo ${{ needs.test.outputs.COVERAGE }} > sonarqube-generic-coverage.xml
       - name: Sonar Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
