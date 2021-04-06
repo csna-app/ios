@@ -1,11 +1,3 @@
-/* 
-  Localizable.strings
-  CSNA
-
-  Created by Wilhelm Thieme on 07/11/2020.
-  
-*/
-
 "remove" = "Remove";
 "ok" = "Ok";
 "cancel" = "Cancel";

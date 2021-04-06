@@ -19,6 +19,5 @@ class Delegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-
 }
 

@@ -62,34 +62,38 @@ extension UIImage {
             context.cgContext.setLineWidth(0.01*size)
             context.cgContext.setStrokeColor(UIColor.black.cgColor)
             
-            if let skinColor = skinColor?.color {
+            if let skinColor = skinColor?.color, let head1Path = Styles["headPart1"], let head2Path = Styles["headPart2"] {
                 context.cgContext.setFillColor(skinColor.cgColor)
-                let head1 = UIBezierPath(from: Styles.get("headPart1"), scale: size)
+                let head1 = UIBezierPath(from: head1Path, scale: size)
                 context.cgContext.addPath(head1.cgPath)
                 context.cgContext.drawPath(using: .fill)
 
                 context.cgContext.setFillColor(skinColor.darken(by: 0.1).cgColor)
-                let head2 = UIBezierPath(from: Styles.get("headPart2"), scale: size)
+                let head2 = UIBezierPath(from: head2Path, scale: size)
                 context.cgContext.addPath(head2.cgPath)
                 context.cgContext.drawPath(using: .fill)
             }
 
-            if let shirtColor = shirtColor?.color {
+            if let shirtColor = shirtColor?.color, let shirtPath = Styles["shirt"] {
                 context.cgContext.setFillColor(shirtColor.cgColor)
-                let shirt = UIBezierPath(from: Styles.get("shirt"), scale: size)
+                let shirt = UIBezierPath(from: shirtPath, scale: size)
                 context.cgContext.addPath(shirt.cgPath)
                 context.cgContext.drawPath(using: .fill)
             }
-
-            context.cgContext.setFillColor(hairColor.color.cgColor)
-            let hair1 = UIBezierPath(from: Styles.get("style\(hairStyle.rawValue)"), scale: size)
-            context.cgContext.addPath(hair1.cgPath)
-            context.cgContext.drawPath(using: .fillStroke)
-
-            context.cgContext.setFillColor(hairColor.color.darken(by: 0.1).cgColor)
-            let hair2 = UIBezierPath(from: Styles.get("style\(hairStyle.rawValue)part2"), scale: size)
-            context.cgContext.addPath(hair2.cgPath)
-            context.cgContext.drawPath(using: .fillStroke)
+            
+            if let stylePath1 = Styles["style\(hairStyle.rawValue)"] {
+                context.cgContext.setFillColor(hairColor.color.cgColor)
+                let hair1 = UIBezierPath(from: stylePath1, scale: size)
+                context.cgContext.addPath(hair1.cgPath)
+                context.cgContext.drawPath(using: .fillStroke)
+            }
+ 
+            if let stylePath2 = Styles["style\(hairStyle.rawValue)part2"] {
+                context.cgContext.setFillColor(hairColor.color.darken(by: 0.1).cgColor)
+                let hair2 = UIBezierPath(from: stylePath2, scale: size)
+                context.cgContext.addPath(hair2.cgPath)
+                context.cgContext.drawPath(using: .fillStroke)
+            }
 
         }
         guard let cg = image.cgImage else { return nil }
@@ -120,14 +124,6 @@ extension UIBezierPath {
             case "V": params.chunked(into: 1).forEach { addLine(to: abs(y: $0[0])) }
             case "c": params.chunked(into: 6).forEach { addCurve(to: rel(x: $0[4], y: $0[5]), controlPoint1: rel(x: $0[0], y: $0[1]), controlPoint2: rel(x: $0[2], y: $0[3])) }
             case "C": params.chunked(into: 6).forEach { addCurve(to: abs(x: $0[4], y: $0[5]), controlPoint1: abs(x: $0[0], y: $0[1]), controlPoint2: abs(x: $0[2], y: $0[3])) }
-            case "s": params.chunked(into: 4).forEach { addCurve(to: rel(x: $0[2], y: $0[3]), controlPoint1: rel(x: $0[0], y: $0[1]), controlPoint2: rel(x: $0[0], y: $0[1])) }
-            case "S": params.chunked(into: 4).forEach { addCurve(to: abs(x: $0[2], y: $0[3]), controlPoint1: abs(x: $0[0], y: $0[1]), controlPoint2: abs(x: $0[0], y: $0[1])) }
-            case "q": params.chunked(into: 4).forEach { addQuadCurve(to: rel(x: $0[2], y: $0[3]), controlPoint: rel(x: $0[0], y: $0[1])) }
-            case "Q": params.chunked(into: 4).forEach { addQuadCurve(to: abs(x: $0[2], y: $0[3]), controlPoint: abs(x: $0[0], y: $0[1])) }
-            case "t": break //TODO: quad shorthand rel <-
-            case "T": break //TODO: quad shorthand abs <-
-            case "a": break //TODO: arc rel <-
-            case "A": break //TODO: arc rel <-
             default: break
             }
             svg.removeSubrange(range)
@@ -161,15 +157,11 @@ extension UIBezierPath {
     
 }
 
-class Styles {
-    private static var styles: [String: String] = {
-        guard let url = Bundle.main.url(forResource: "Styles", withExtension: "json") else { return [:] }
-        guard let data = try? Data(contentsOf: url) else { return [:] }
-        guard let styles = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: String] else { return [:] }
-        return styles
-    }()
-    
-    static func get(_ key: String) -> String { return styles[key] ?? "" }
-}
+let Styles: [String: String] = {
+    guard let url = Bundle.main.url(forResource: "Styles", withExtension: "json") else { return [:] }
+    guard let data = try? Data(contentsOf: url) else { return [:] }
+    guard let styles = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: String] else { return [:] }
+    return styles
+}()
 
 
