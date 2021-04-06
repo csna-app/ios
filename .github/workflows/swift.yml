@@ -10,27 +10,33 @@ on:
 jobs:
   test:
     runs-on: macos-latest
-    outputs:
-      COVERAGE: ${{ steps.convert.outputs.coverage }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Git
+        uses: actions/checkout@v2
       - name: Setup Xcode
         run: sudo xcode-select -switch /Applications/Xcode_12.4.app
       - name: Run Unit Tests
-        run: xcodebuild clean test -scheme CSNA -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 11 -derivedDataPath build
+        run: xcodebuild clean test -scheme CSNA -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 11 -derivedDataPath build | xcpretty
       - name: Convert Coverage
-        id: convert
-        run: echo "::set-output name=coverage::$(bash coverage build/Logs/Test/*.xcresult/)"
+        run: bash coverage build/Logs/Test/*.xcresult/ > code-coverage.xml
+      - name: Upload Coverage
+        uses: actions/upload-artifact@v2
+          with:
+            name: coverage
+            path: code-coverage.xml
 
   analyze:
     runs-on: ubuntu-latest
     needs: test
     steps:
-      - uses: actions/checkout@v2
+      - name: Git
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Save Coverage
-        run: echo ${{ needs.test.outputs.COVERAGE }} > sonarqube-generic-coverage.xml
+      - name: Download Coverage
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage
       - name: Sonar Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
