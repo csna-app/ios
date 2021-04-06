@@ -9,19 +9,17 @@ on:
 
 jobs:
   build:
-    env:
-      XCODE_SCHEME: 'CSNA'
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
     - name: Clean
-      run: xcodebuild clean -scheme ${{ XCODE_SCHEME }}
+      run: xcodebuild clean -scheme CSNA
     - name: Build
-      run: xcodebuild build -scheme ${{ XCODE_SCHEME }}
+      run: xcodebuild build -scheme CSNA
     - name: Test
-      run: xcodebuild test -scheme ${{ XCODE_SCHEME }}
+      run: xcodebuild test -scheme CSNA
     - name: Analyze
       uses: SonarSource/sonarcloud-github-action@master
       env:
