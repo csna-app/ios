@@ -124,6 +124,10 @@ extension UIBezierPath {
             case "V": params.chunked(into: 1).forEach { addLine(to: abs(y: $0[0])) }
             case "c": params.chunked(into: 6).forEach { addCurve(to: rel(x: $0[4], y: $0[5]), controlPoint1: rel(x: $0[0], y: $0[1]), controlPoint2: rel(x: $0[2], y: $0[3])) }
             case "C": params.chunked(into: 6).forEach { addCurve(to: abs(x: $0[4], y: $0[5]), controlPoint1: abs(x: $0[0], y: $0[1]), controlPoint2: abs(x: $0[2], y: $0[3])) }
+            case "s": params.chunked(into: 4).forEach { addCurve(to: rel(x: $0[2], y: $0[3]), controlPoint1: rel(x: $0[0], y: $0[1]), controlPoint2: rel(x: $0[0], y: $0[1])) }
+            case "S": params.chunked(into: 4).forEach { addCurve(to: abs(x: $0[2], y: $0[3]), controlPoint1: abs(x: $0[0], y: $0[1]), controlPoint2: abs(x: $0[0], y: $0[1])) }
+            case "q": params.chunked(into: 4).forEach { addQuadCurve(to: rel(x: $0[2], y: $0[3]), controlPoint: rel(x: $0[0], y: $0[1])) }
+            case "Q": params.chunked(into: 4).forEach { addQuadCurve(to: abs(x: $0[2], y: $0[3]), controlPoint: abs(x: $0[0], y: $0[1])) }
             default: break
             }
             svg.removeSubrange(range)
