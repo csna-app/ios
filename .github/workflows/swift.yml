@@ -8,20 +8,23 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  build:
+  test:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: Setup
-      run: sudo xcode-select -switch /Applications/Xcode_12.4.app
-    - name: Test
-      run: xcodebuild clean test -scheme CSNA -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 11
-    - name: Analyze
-      uses: SonarSource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    - name: Docs
-      run: echo docs
+      - uses: actions/checkout@v2
+      - name: Setup Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_12.4.app
+      - name: Run Unit Tests
+        run: xcodebuild clean test -scheme CSNA -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 11
+
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Sonar Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
