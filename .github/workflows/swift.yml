@@ -9,9 +9,9 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
     env:
       XCODE_SCHEME: 'CSNA'
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
       with:
