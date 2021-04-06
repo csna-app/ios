@@ -65,7 +65,7 @@ class Actor: NSObject, Codable {
         skinColor = SkinColor.allCases.randomElement() ?? .silk
         hairColor = HairColor.allCases.randomElement() ?? .auburn
         shirtColor = ShirtColor.allCases.randomElement() ?? .black
-        hairStyle = sex ?? HairStyle.allCases.randomElement() ?? .one
+        hairStyle = sex ?? HairStyle.allCases.randomElement() ?? .fringe
         name = String(localizedString("unisexNames").split(separator: ",").randomElement() ?? "")
         centerX = Float(position.x)
         centerY = Float(position.y)
