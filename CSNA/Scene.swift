@@ -24,8 +24,6 @@ class Scene: UIView {
     
     @IBOutlet weak var delegate: SceneDelegate?
     
-    //TODO: bug when rotating if line is at max range it sometimes dissapears
-    
     func reloadNodes() {
         subviews.forEach({ $0.removeFromSuperview() })
         groups = delegate?.scene?(aNodesFor: self) ?? []
