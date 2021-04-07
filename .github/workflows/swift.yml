@@ -16,7 +16,7 @@ jobs:
       - name: Ruby
         uses: ruby/setup-ruby@v1
       - name: Install Slather
-        uses: gem install slather
+        run: gem install slather
       - name: Setup Xcode
         run: sudo xcode-select -switch /Applications/Xcode_12.4.app
       - name: Run Unit Tests
