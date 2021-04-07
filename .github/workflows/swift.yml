@@ -13,18 +13,12 @@ jobs:
     steps:
       - name: Git
         uses: actions/checkout@v2
-      - name: Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.6
-      - name: Install Slather
-        run: gem install slather
       - name: Setup Xcode
         run: sudo xcode-select -switch /Applications/Xcode_12.4.app
       - name: Run Unit Tests
         run: xcodebuild clean test -scheme CSNA -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 11 -derivedDataPath build | xcpretty
       - name: Convert Coverage
-        run: slather coverage --sonarqube-xml --scheme CSNA CSNA.xcodeproj
+        run: bash coverage build/Logs/Test/*.xcresult/ > code-coverage.xml
       - name: Upload Coverage
         uses: actions/upload-artifact@v2
         with:
