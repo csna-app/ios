@@ -1,6 +1,7 @@
 # CSNA iOS
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=wjthieme_csna&metric=alert_status)](https://sonarcloud.io/dashboard?id=wjthieme_csna)
 [![Build](https://github.com/wjthieme/csna/actions/workflows/swift.yml/badge.svg?branch=main)](https://github.com/csna-app/ios/actions)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=wjthieme_csna&metric=alert_status)](https://sonarcloud.io/dashboard?id=wjthieme_csna)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=wjthieme_csna&metric=coverage)](https://sonarcloud.io/dashboard?id=wjthieme_csna)
 
 ## How to use
 
