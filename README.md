@@ -12,7 +12,7 @@ For ease, we've made the app available in the [App Store](https://apps.apple.com
 If you are experienced with building iOS applications from source you can checkout this repository and build it to a simulator or physical device. Just remember to change the profile/BundleID if you want to run on a physical device.
 
 ## How to cite
-> Thieme, W.J., & Thieme, A.M.M. (2021) CSNA: Application for Classroom Social Network Analysis. https://apps.apple.com/app/id1561754611
+> Thieme, W.J., & Thieme, A.M.M. (2021) *CSNA: Application for Classroom Social Network Analysis.* https://apps.apple.com/app/id1561754611
 
 ## Licence
 
