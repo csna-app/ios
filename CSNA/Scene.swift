@@ -1,6 +1,6 @@
 import UIKit
 
-@objc protocol SceneDelegate: class {
+@objc protocol SceneDelegate: AnyObject {
     @objc optional func scene(_ scene: Scene, didChange groups: [Set<ANode>])
     @objc optional func scene(aNodesFor scene: Scene) -> [Set<ANode>]
     @objc optional func scene(tNodesFor scene: Scene) -> [TNode]
@@ -13,7 +13,7 @@ class Scene: UIView {
 
     private var selectedNode: Node?
     
-    private let proximityDistance = UIDevice.current.userInterfaceIdiom == .pad ? CGFloat(150) : CGFloat(75)
+    private let proximityDistance = UIDevice.current.userInterfaceIdiom == .pad ? CGFloat(70) : CGFloat(35)
     private let clickDistance = CGFloat(5)
     private let feedback = UISelectionFeedbackGenerator()
     private var groups: [Set<ANode>] = []

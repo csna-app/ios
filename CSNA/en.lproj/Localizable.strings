@@ -33,6 +33,8 @@
 "terrain10" = "Painting";
 "terrain11" = "Rectangle";
 "terrain12" = "Circle";
+"terrain13" = "Horizontal";
+"terrain14" = "Vertical";
 
 "size0" = "Tiny";
 "size1" = "Small";

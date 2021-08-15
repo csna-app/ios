@@ -33,6 +33,8 @@
 "terrain10" = "Schilderij";
 "terrain11" = "Rechthoek";
 "terrain12" = "Circel";
+"terrain13" = "Horizontaal";
+"terrain14" = "Verticaal";
 
 "size0" = "Mini";
 "size1" = "Klein";

@@ -51,7 +51,7 @@ class ANode: Node {
     
     init(image: UIImage?, title: String, location: CGPoint, menu: UIMenu) {
         super.init(context: menu)
-        let dim = UIDevice.current.userInterfaceIdiom == .pad ? 70 : 40
+        let dim = UIDevice.current.userInterfaceIdiom == .pad ? 50 : 30
         layer.zPosition = 2
         
         iconView.image = image
@@ -121,7 +121,7 @@ class LNode: UIView {
         layer.zPosition = 1
 
         shapeLayer.strokeColor = UIColor.systemGray4.cgColor
-        shapeLayer.lineWidth = UIDevice.current.userInterfaceIdiom == .pad ? 8 : 4
+        shapeLayer.lineWidth = UIDevice.current.userInterfaceIdiom == .pad ? 4 : 2
         
         layer.addSublayer(shapeLayer)
         updatePath()

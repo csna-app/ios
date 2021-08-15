@@ -126,7 +126,10 @@ class Service {
     case txt, csvGroup, json, csvActor
     
     fileprivate func convert(_ model: Model) -> Data? {
-        let values = model.transactions.mapValues({ model.getActorNames($0) }).sorted(by: { $0.key < $1.key })
+        let values = model.transactions
+            .mapValues({ model.getActorNames($0) })
+            .sorted(by: { $0.key < $1.key })
+            .map({ ($0.key, $0.value.map(({ $0.sorted() }))) })
         switch self {
         case .txt:
             let string = values.map({ "\($0.0): \($0.1)" }).joined(separator: "\n")
@@ -135,10 +138,10 @@ class Service {
             let string = values.map({ "\($0.0),\($0.1.map({ $0.joined(separator: ";") }).joined(separator: ","))" }).joined(separator: "\n")
             return string.data(using: .utf8)
         case .json:
-            let dict = values.reduce(into: [:], { $0["\($1.key)"] = $1.value  })
+            let dict = values.reduce(into: [:], { $0["\($1.0)"] = $1.1  })
             return try? JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys])
         case .csvActor:
-            let string = values.flatMap({ el in el.value.flatMap({ $0.combinations(ofCount: 2).map({ "\(el.key),\($0[0]),\($0[1])" }) }) }).joined(separator: "\n")
+            let string = values.flatMap({ el in el.1.flatMap({ $0.combinations(ofCount: 2).map({ "\(el.0),\($0[0]),\($0[1])" }) }) }).joined(separator: "\n")
             return string.data(using: .utf8)
         }
     }

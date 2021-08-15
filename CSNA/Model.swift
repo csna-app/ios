@@ -186,7 +186,7 @@ enum TerrainSize: Int, Codable, CaseIterable {
 }
 
 enum TerrainType: Int, Codable, CaseIterable {
-    case bookcase, wardrobe, building, temple, bed, tv, computer, radio, guitars, game, paint, rectangle, circle
+    case bookcase, wardrobe, building, temple, bed, tv, computer, radio, guitars, game, paint, rectangle, circle, horizontal, vertical
     
     var icon: String {
         switch self {
@@ -203,6 +203,8 @@ enum TerrainType: Int, Codable, CaseIterable {
         case .paint: return "paintpalette"
         case .rectangle: return "rectangle"
         case .circle: return "circle"
+        case .horizontal: return "minus"
+        case .vertical: return "poweron"
         }
     }
     
