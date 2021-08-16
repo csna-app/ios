@@ -54,6 +54,8 @@
 "shirt8" = "Yellow";
 "shirt9" = "White";
 "shirt10" = "Black";
+"shirt11" = "Rose";
+"shirt12" = "Silver";
 
 "hair0" = "Ebony";
 "hair1" = "Chocolate";
@@ -73,6 +75,9 @@
 "hair15" = "Silver";
 "hair16" = "Platinum";
 "hair17" = "Onyx";
+"hair18" = "Summer";
+"hair19" = "Beach";
+"hair20" = "Honey";
 
 "skin0" = "Silk";
 "skin1" = "Lumber";

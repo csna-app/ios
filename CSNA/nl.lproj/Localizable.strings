@@ -54,6 +54,8 @@
 "shirt8" = "Yellow";
 "shirt9" = "Wit";
 "shirt10" = "Zwart";
+"shirt11" = "Roos";
+"shirt12" = "Zilver";
 
 "hair0" = "Ebbehout";
 "hair1" = "Chocolade";
@@ -73,6 +75,9 @@
 "hair15" = "Zilver";
 "hair16" = "Platinum";
 "hair17" = "Onyx";
+"hair18" = "Zomer";
+"hair19" = "Strand";
+"hair20" = "Honing";
 
 "skin0" = "Zijde";
 "skin1" = "Polijst";

@@ -94,7 +94,7 @@ enum SkinColor: Int, Codable, CaseIterable {
 }
 
 enum HairColor: Int, Codable, CaseIterable {
-    case ebony, chocolate, cinnamon, hazelnut, chesnut, pecan, ginger, blonde, sand, apricot, fire, auburn, copper, walnut, mist, silver, platinum, onyx
+    case ebony, chocolate, cinnamon, hazelnut, chesnut, pecan, ginger, blonde, sand, apricot, fire, auburn, copper, walnut, mist, silver, platinum, onyx, summer, beach, honey
     
     var color: UIColor {
         switch self {
@@ -116,6 +116,9 @@ enum HairColor: Int, Codable, CaseIterable {
         case .silver: return UIColor(hex: "#b5b5bd")
         case .platinum: return UIColor(hex: "#e0dccb")
         case .onyx: return UIColor(hex: "#000000")
+        case .summer: return UIColor(hex: "#ffffe0")
+        case .beach: return UIColor(hex: "#fffacd")
+        case .honey: return UIColor(hex: "#fff5b7")
         }
     }
     
@@ -123,7 +126,7 @@ enum HairColor: Int, Codable, CaseIterable {
 }
 
 enum ShirtColor: Int, Codable, CaseIterable {
-    case blue, green, indigo, orange, pink, purple, red, teal, yellow, white, black
+    case blue, green, indigo, orange, pink, purple, red, teal, yellow, white, black, rose, silver
     
     var color: UIColor {
         switch self {
@@ -138,6 +141,8 @@ enum ShirtColor: Int, Codable, CaseIterable {
         case .yellow: return UIColor(hex: "#ffd60a")
         case .white: return UIColor(hex: "#e5e5ea")
         case .black: return UIColor(hex: "#2c2c2e")
+        case .rose: return UIColor(hex: "#ffb6c1")
+        case .silver: return UIColor(hex: "#c0c0c0")
         }
     }
     
